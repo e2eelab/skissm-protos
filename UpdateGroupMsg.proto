@@ -31,7 +31,6 @@ import "skissm/GroupMember.proto";
 message UpdateGroupMsg {
     int64 modifiedDate = 1;
     E2eeAddress group_address = 2;
-    string group_name = 3;
-    string group_avatar = 4;
-    repeated GroupMember group_members = 5;
+    repeated GroupMember group_members = 3;
+    string args_json = 4;
 }

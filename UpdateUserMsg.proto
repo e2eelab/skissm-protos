@@ -30,6 +30,5 @@ import "skissm/E2eeAddress.proto";
 message UpdateUserMsg {
     int64 modifiedDate = 1;
     E2eeAddress user_address = 2;
-    string user_name = 3;
-    string user_avatar = 4;
+    string args_json = 3;
 }
