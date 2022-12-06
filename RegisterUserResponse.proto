@@ -36,8 +36,9 @@ message RegisterUserResponse {
     E2eeAddress address = 3;
     string password = 4;
     string jwt = 5;
+    int64 expires_in = 6;
 
-    repeated E2eeAddress other_device_addresses = 6;
-    repeated E2eeAddress other_user_addresses = 7;
-    repeated GroupInfo group_info_list = 8;
+    repeated E2eeAddress other_device_addresses = 7;
+    repeated E2eeAddress other_user_addresses = 8;
+    repeated GroupInfo group_info_list = 9;
 }
