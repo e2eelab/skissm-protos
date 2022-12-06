@@ -41,4 +41,7 @@ message Account {
     SignedPreKey signed_pre_key = 8;
     repeated OneTimePreKey one_time_pre_keys = 9;
     uint32 next_one_time_pre_key_id = 10;
+
+    string jwt = 11;
+    int64 expires_in = 12;
 }
