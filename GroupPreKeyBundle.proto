@@ -25,7 +25,6 @@ option java_outer_classname = "GroupPreKeyBundleProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
-import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
 
 message GroupPreKeyBundle {
