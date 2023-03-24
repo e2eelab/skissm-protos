@@ -42,8 +42,10 @@ message Session {
     uint32 bob_signed_pre_key_id = 11;
     bytes bob_one_time_pre_key = 12;
     uint32 bob_one_time_pre_key_id = 13;
+    bytes associated_data = 14;
 
-    bool f2f = 14;
-    bool responded = 15;
-    bytes associated_data = 16;
+    bool f2f = 15;
+    bool responded = 16;
+    int64 t_invite = 17;
+    repeated bytes pre_shared_keys = 18;
 }
