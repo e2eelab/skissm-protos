@@ -27,11 +27,11 @@ option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 import "skissm/GroupMember.proto";
+import "skissm/GroupInfo.proto";
 
 message AddGroupMembersMsg {
     string e2ee_pack_id = 1;
     E2eeAddress sender_address = 2;
-    E2eeAddress group_address = 3;
-    repeated GroupMember adding_members = 4;
-    repeated GroupMember all_members = 5;
+    repeated GroupMember adding_members = 3;
+    GroupInfo group_info = 4;
 }
