@@ -32,6 +32,6 @@ import "skissm/GroupInfo.proto";
 message AddGroupMembersMsg {
     string e2ee_pack_id = 1;
     E2eeAddress sender_address = 2;
-    repeated GroupMember adding_members = 3;
-    GroupInfo group_info = 4;
+    GroupInfo group_info = 3;
+    repeated GroupMember adding_members = 4;
 }

@@ -26,11 +26,11 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
+import "skissm/GroupInfo.proto";
 import "skissm/GroupMember.proto";
 
 message UpdateGroupMsg {
-    int64 modifiedDate = 1;
-    E2eeAddress group_address = 2;
-    repeated GroupMember group_members = 3;
-    string args_json = 4;
+    GroupInfo group_info = 1;
+    int64 modifiedDate = 2;
+    string args_json = 3;
 }
