@@ -25,9 +25,7 @@ option java_outer_classname = "UpdateGroupMsgProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
-import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
-import "skissm/GroupMember.proto";
 
 message UpdateGroupMsg {
     GroupInfo group_info = 1;
