@@ -26,8 +26,9 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 enum GroupRole {
-    GROUP_ROLE_MEMBER = 0;
-    GROUP_ROLE_MANAGER = 1;
+    GROUP_ROLE_PENDING = 0;
+    GROUP_ROLE_MEMBER = 1;
+    GROUP_ROLE_MANAGER = 2;
 }
 
 message GroupMember {
