@@ -21,28 +21,26 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "AccountProto";
+option java_outer_classname = "PendingRequestProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
-import "skissm/E2eeAddress.proto";
-import "skissm/IdentityKey.proto";
-import "skissm/SignedPreKey.proto";
-import "skissm/OneTimePreKey.proto";
+enum PendingRequestType {
+    GET_PRE_KEY_BUNDLE_REQUEST = 0;
+    INVITE_REQUEST = 1;
+    ACCEPT_REQUEST = 2;
+    PUBLISH_SPK_REQUEST = 3;
+    SUPPLY_OPKS_REQUEST = 4;
+    SEND_ONE2ONE_MSG_REQUEST = 5;
+    CREATE_GROUP_REQUEST = 6;
+    ADD_GROUP_MEMBERS_REQUEST = 7;
+    REMOVE_GROUP_MEMBERS_REQUEST = 8;
+    SEND_GROUP_MSG_REQUEST = 9;
+    PROTO_MSG = 10;
+}
 
-message Account {
-    string version = 1;
-    string e2ee_pack_id = 2;
-    uint64 account_id = 3;
-    E2eeAddress address = 4;
-
-    IdentityKey identity_key = 11;
-    SignedPreKey signed_pre_key = 12;
-    repeated OneTimePreKey one_time_pre_keys = 13;
-    uint32 next_one_time_pre_key_id = 14;
-
-    bool saved = 21;
-    string password = 22;
-    string auth = 23;
-    int64 expires_in = 24;
+message PendingRequest {
+    PendingRequestType type = 1;
+    bytes request_data = 2;
+    repeated bytes request_args = 3;
 }
