@@ -21,18 +21,13 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "CreateGroupResponseProto";
+option java_outer_classname = "GroupMemberIDProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
-import "skissm/GroupMemberID.proto";
-import "skissm/ResponseCode.proto";
 
-message CreateGroupResponse {
-    ResponseCode code = 1;
-    string msg = 2;
-
-    E2eeAddress group_address = 3;
-    repeated GroupMemberID member_ids = 4;
+message GroupMemberID {
+    E2eeAddress group_member_address = 1;
+    bytes public_key = 2;
 }
