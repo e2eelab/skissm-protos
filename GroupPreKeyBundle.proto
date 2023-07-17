@@ -25,13 +25,16 @@ option java_outer_classname = "GroupPreKeyBundleProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
 
 message GroupPreKeyBundle {
     string version = 1;
-    string session_id = 2;
-    string old_session_id = 3;
-    GroupInfo group_info = 4;
-    uint32 sequence = 5;
-    bytes seed_secret = 6;
+    string e2ee_pack_id = 2;
+    E2eeAddress sender = 3;
+    string session_id = 4;
+    string old_session_id = 5;
+    GroupInfo group_info = 6;
+    uint32 sequence = 7;
+    bytes seed_secret = 8;
 }
