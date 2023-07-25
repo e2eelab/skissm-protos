@@ -43,6 +43,10 @@ message CreateGroupArg {
     repeated GroupMember group_members = 2;
 }
 
+message UpdateGroupNameArg {
+    string group_name = 1;
+}
+
 message UpdateGroupAvatarArg {
     string groupAvatarUrl = 1;
 }
@@ -67,9 +71,10 @@ message GroupManagerMsg {
     GroupOp op = 5;
     oneof arg {
         CreateGroupArg create_group_arg = 6;
-        UpdateGroupAvatarArg update_group_avatar_arg = 7;
-        UpdateGroupAdminsArg update_group_admins_arg = 8;
-        AddGroupMembersArg  add_group_members_arg = 9;
-        RemoveGroupMembersArg remove_group_members_arg = 10;
+        UpdateGroupNameArg update_group_name_arg = 7;
+        UpdateGroupAvatarArg update_group_avatar_arg = 8;
+        UpdateGroupAdminsArg update_group_admins_arg = 9;
+        AddGroupMembersArg  add_group_members_arg = 10;
+        RemoveGroupMembersArg remove_group_members_arg = 11;
     }
 }
