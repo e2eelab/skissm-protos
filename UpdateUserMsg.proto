@@ -31,6 +31,7 @@ enum UpdateUserOp {
     UPDATE_USER_NAME = 0;
     UPDATE_USER_AVATAR = 1;
     UPDATE_USER_STATE = 2;
+    UPDATE_USER_PRIVACY = 3;
 }
 
 message UpdateUserNameArg {
