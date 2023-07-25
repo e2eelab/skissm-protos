@@ -26,12 +26,14 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
-import "skissm/GroupMember.proto";
 import "skissm/GroupInfo.proto";
+import "skissm/GroupMemberID.proto";
+import "skissm/GroupMember.proto";
 
 message AddGroupMembersMsg {
     string e2ee_pack_id = 1;
     E2eeAddress sender_address = 2;
     GroupInfo group_info = 3;
-    repeated GroupMember adding_members = 4;
+    repeated GroupMemberID adding_member_ids = 4;
+    repeated GroupMember adding_members = 5;
 }

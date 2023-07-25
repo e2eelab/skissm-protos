@@ -26,6 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/GroupMember.proto";
+import "skissm/GroupMemberID.proto";
 import "skissm/ResponseCode.proto";
 
 message AddGroupMembersResponse {
@@ -33,4 +34,5 @@ message AddGroupMembersResponse {
     string msg = 2;
 
     repeated GroupMember group_members = 3;
+    repeated GroupMemberID adding_member_ids = 4;
 }
