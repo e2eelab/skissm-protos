@@ -29,4 +29,5 @@ import "skissm/E2eeAddress.proto";
 
 message GetGroupRequest {
     E2eeAddress group_address = 1;
+    E2eeAddress sender_address = 2;
 }
