@@ -27,7 +27,7 @@ option swift_prefix="Swift";
 
 import "skissm/Session.proto";
 import "skissm/GroupPreKeyBundle.proto";
-import "skissm/GroupRatchetState.proto";
+import "skissm/GroupUpdateKeyBundle.proto";
 import "skissm/GroupSession.proto";
 
 message Plaintext {
@@ -37,7 +37,7 @@ message Plaintext {
         bytes common_sync_msg = 3;
         skissm.Session f2f_session_data = 4;
         skissm.GroupPreKeyBundle group_pre_key_bundle = 5;
-        skissm.GroupRatchetState group_ratchet_state = 6;
+        skissm.GroupUpdateKeyBundle group_ratchet_state = 6;
         skissm.GroupSession inbound_group_session_data = 7;
     };
 }

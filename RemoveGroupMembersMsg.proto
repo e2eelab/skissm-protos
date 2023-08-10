@@ -27,13 +27,13 @@ option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
-import "skissm/GroupMemberID.proto";
+import "skissm/GroupMemberInfo.proto";
 import "skissm/GroupMember.proto";
 
 message RemoveGroupMembersMsg {
     string e2ee_pack_id = 1;
     E2eeAddress sender_address = 2;
     GroupInfo group_info = 3;
-    repeated GroupMemberID member_ids = 4;
-    repeated GroupMember removing_members = 5;
+    repeated GroupMember removing_members = 4;
+    repeated GroupMemberInfo member_ids = 5;
 }

@@ -27,7 +27,7 @@ option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
-import "skissm/GroupMemberID.proto";
+import "skissm/GroupMemberInfo.proto";
 import "skissm/GroupMember.proto";
 
 message AddGroupMembersMsg {
@@ -35,6 +35,6 @@ message AddGroupMembersMsg {
     E2eeAddress sender_address = 2;
     uint32 sequence = 3;
     GroupInfo group_info = 4;
-    repeated GroupMemberID adding_member_ids = 5;
-    repeated GroupMember adding_members = 6;
+    repeated GroupMember adding_members = 5;
+    repeated GroupMemberInfo adding_member_ids = 6;
 }
