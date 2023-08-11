@@ -33,5 +33,5 @@ message CreateGroupMsg {
     string e2ee_pack_id = 1;
     E2eeAddress sender_address = 2;
     GroupInfo group_info = 3;
-    repeated GroupMemberInfo member_ids = 4;
+    repeated GroupMemberInfo member_info_list = 4;
 }

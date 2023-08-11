@@ -34,5 +34,5 @@ message RemoveGroupMembersResponse {
     string msg = 2;
 
     repeated GroupMember group_members = 3;
-    repeated GroupMemberInfo member_ids = 4;
+    repeated GroupMemberInfo member_info_list = 4;
 }

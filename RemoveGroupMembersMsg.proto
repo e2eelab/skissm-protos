@@ -35,5 +35,5 @@ message RemoveGroupMembersMsg {
     E2eeAddress sender_address = 2;
     GroupInfo group_info = 3;
     repeated GroupMember removing_members = 4;
-    repeated GroupMemberInfo member_ids = 5;
+    repeated GroupMemberInfo member_info_list = 5;
 }

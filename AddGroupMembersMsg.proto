@@ -36,5 +36,5 @@ message AddGroupMembersMsg {
     uint32 sequence = 3;
     GroupInfo group_info = 4;
     repeated GroupMember adding_members = 5;
-    repeated GroupMemberInfo adding_member_ids = 6;
+    repeated GroupMemberInfo adding_member_info_list = 6;
 }

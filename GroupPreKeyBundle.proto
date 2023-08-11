@@ -36,5 +36,5 @@ message GroupPreKeyBundle {
     string old_session_id = 5;
     GroupInfo group_info = 6;
     uint32 sequence = 7;
-    bytes seed_secret = 8;
+    bytes group_seed = 8;
 }
