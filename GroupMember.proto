@@ -29,7 +29,8 @@ enum GroupRole {
     GROUP_ROLE_MEMBER = 0;
     GROUP_ROLE_MANAGER = 1;
 
-    GROUP_ROLE_PENDING_MASK = 8;
+    GROUP_ROLE_PENDING_MEMBER = 10;
+    GROUP_ROLE_PENDING_MANAGER = 11;
 }
 
 message GroupMember {

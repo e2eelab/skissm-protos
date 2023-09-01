@@ -29,13 +29,15 @@ import "skissm/E2eeAddress.proto";
 import "skissm/GroupMember.proto";
 
 enum GroupOp {
-    CREATE_GROUP = 0;
-    UPDATE_GROUP_NAME = 1;
-    UPDATE_GROUP_AVATAR = 2;
-    UPDATE_GROUP_ADMINS = 3;
-    ADD_GROUP_MEMBERS = 4;
-    REMOVE_GROUP_MEMBERS = 5;
-    DESTROY_GROUP = 6;
+    UNKNOWN = 0;
+    CREATE_GROUP = 11;
+    UPDATE_GROUP_NAME = 12;
+    UPDATE_GROUP_AVATAR = 13;
+    UPDATE_GROUP_ADMINS = 14;
+    INVITE_GROUP_MEMBERS = 21;
+    ADD_GROUP_MEMBERS = 22;
+    REMOVE_GROUP_MEMBERS = 23;
+    DESTROY_GROUP = 30;
 }
 
 message CreateGroupArg {
@@ -55,6 +57,10 @@ message UpdateGroupAdminsArg {
     repeated GroupMember group_admins = 1;
 }
 
+message InviteGroupMembersArg {
+    repeated GroupMember invited_members = 1;
+}
+
 message AddGroupMembersArg {
     repeated GroupMember added_members = 1;
 }
@@ -70,11 +76,12 @@ message GroupManagerMsg {
     string group_name = 4;
     GroupOp op = 5;
     oneof arg {
-        CreateGroupArg create_group_arg = 6;
-        UpdateGroupNameArg update_group_name_arg = 7;
-        UpdateGroupAvatarArg update_group_avatar_arg = 8;
-        UpdateGroupAdminsArg update_group_admins_arg = 9;
-        AddGroupMembersArg  add_group_members_arg = 10;
-        RemoveGroupMembersArg remove_group_members_arg = 11;
+        CreateGroupArg create_group_arg = 11;
+        UpdateGroupNameArg update_group_name_arg = 12;
+        UpdateGroupAvatarArg update_group_avatar_arg = 13;
+        UpdateGroupAdminsArg update_group_admins_arg = 14;
+        InviteGroupMembersArg invite_group_members_arg = 21;
+        AddGroupMembersArg add_group_members_arg = 22;
+        RemoveGroupMembersArg remove_group_members_arg = 23;
     }
 }
