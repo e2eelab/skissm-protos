@@ -40,7 +40,6 @@ import "skissm/InviteMsg.proto";
 import "skissm/NewUserDeviceMsg.proto";
 import "skissm/ProtoMsgTag.proto";
 import "skissm/RemoveGroupMembersMsg.proto";
-import "skissm/UpdateGroupMsg.proto";
 import "skissm/UpdateUserMsg.proto";
 import "skissm/SupplyOpksMsg.proto";
 import "skissm/ServerHeartbeatMsg.proto";
@@ -51,23 +50,26 @@ message ProtoMsg {
     E2eeAddress from = 2;
     E2eeAddress to = 3;
     oneof payload {
-        AcquireSyncMsg acquire_sync_msg = 4;
-        SupplyOpksMsg supply_opks_msg = 5;
-        InviteMsg invite_msg = 6;
-        AcceptMsg accept_msg = 7;
-        F2fInviteMsg f2f_invite_msg = 8;
-        F2fAcceptMsg f2f_accept_msg = 9;
-        NewUserDeviceMsg new_user_device_msg = 10;
-        E2eeMsg e2ee_msg = 11;
-        CreateGroupMsg create_group_msg = 12;
-        AddGroupMembersMsg add_group_members_msg = 13;
-        RemoveGroupMembersMsg remove_group_members_msg = 14;
-        UpdateGroupMsg update_group_msg = 15;
-        ClientHeartbeatMsg client_heartbeat_msg = 16;
-        ServerHeartbeatMsg server_heartbeat_msg = 17;
-        UpdateUserMsg update_user_msg = 18;
-        FriendManagerMsg friend_manager_msg = 19;
-        GroupManagerMsg group_manager_msg = 20;
-        SystemManagerMsg system_manager_msg = 21;
+        AcquireSyncMsg acquire_sync_msg = 11;
+
+        SupplyOpksMsg supply_opks_msg = 21;
+        InviteMsg invite_msg = 22;
+        AcceptMsg accept_msg = 23;
+        F2fInviteMsg f2f_invite_msg = 24;
+        F2fAcceptMsg f2f_accept_msg = 25;
+        NewUserDeviceMsg new_user_device_msg = 26;
+        CreateGroupMsg create_group_msg = 27;
+        AddGroupMembersMsg add_group_members_msg = 28;
+        RemoveGroupMembersMsg remove_group_members_msg = 29;
+        E2eeMsg e2ee_msg = 30;
+
+        UpdateUserMsg update_user_msg = 41;
+
+        FriendManagerMsg friend_manager_msg = 51;
+        GroupManagerMsg group_manager_msg = 52;
+        SystemManagerMsg system_manager_msg = 53;
+
+        ClientHeartbeatMsg client_heartbeat_msg = 61;
+        ServerHeartbeatMsg server_heartbeat_msg = 62;
     };
 }
