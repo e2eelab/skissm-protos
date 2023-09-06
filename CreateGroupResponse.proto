@@ -26,6 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
+import "skissm/GroupMemberInfo.proto";
 import "skissm/ResponseCode.proto";
 
 message CreateGroupResponse {
@@ -33,4 +34,5 @@ message CreateGroupResponse {
     string msg = 2;
 
     E2eeAddress group_address = 3;
+    repeated GroupMemberInfo member_info_list = 4;
 }

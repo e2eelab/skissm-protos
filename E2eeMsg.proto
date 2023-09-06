@@ -35,8 +35,9 @@ message E2eeMsg {
     E2eeAddress to = 3;
     string msg_id = 4;
     string session_id = 5;
+    uint32 notif_level = 6;
     oneof payload {
-        skissm.One2oneMsgPayload one2one_msg = 6;
-        skissm.GroupMsgPayload group_msg = 7;
+        One2oneMsgPayload one2one_msg = 11;
+        GroupMsgPayload group_msg = 12;
     };
 }

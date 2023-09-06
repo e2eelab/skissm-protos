@@ -21,27 +21,13 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "AccountProto";
+option java_outer_classname = "GroupMemberInfoProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
-import "skissm/IdentityKey.proto";
-import "skissm/SignedPreKey.proto";
-import "skissm/OneTimePreKey.proto";
 
-message Account {
-    string version = 1;
-    string e2ee_pack_id = 2;
-    E2eeAddress address = 3;
-
-    IdentityKey identity_key = 11;
-    SignedPreKey signed_pre_key = 12;
-    repeated OneTimePreKey one_time_pre_keys = 13;
-    uint32 next_one_time_pre_key_id = 14;
-
-    bool saved = 21;
-    string password = 22;
-    string auth = 23;
-    int64 expires_in = 24;
+message GroupMemberInfo {
+    E2eeAddress member_address = 1;
+    bytes sign_public_key = 2;
 }

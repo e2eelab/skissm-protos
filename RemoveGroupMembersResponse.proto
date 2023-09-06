@@ -26,6 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/GroupMember.proto";
+import "skissm/GroupMemberInfo.proto";
 import "skissm/ResponseCode.proto";
 
 message RemoveGroupMembersResponse {
@@ -33,4 +34,5 @@ message RemoveGroupMembersResponse {
     string msg = 2;
 
     repeated GroupMember group_members = 3;
+    repeated GroupMemberInfo member_info_list = 4;
 }

@@ -27,15 +27,15 @@ option swift_prefix="Swift";
 
 import "skissm/Session.proto";
 import "skissm/GroupPreKeyBundle.proto";
-import "skissm/GroupSession.proto";
+import "skissm/GroupUpdateKeyBundle.proto";
 
 message Plaintext {
     string version = 1;
     oneof payload {
         bytes common_msg = 2;
         bytes common_sync_msg = 3;
-        skissm.Session f2f_session_data = 4;
-        skissm.GroupPreKeyBundle group_pre_key_bundle = 5;
-        skissm.GroupSession inbound_group_session_data = 6;
+        Session f2f_session_data = 4;
+        GroupPreKeyBundle group_pre_key_bundle = 5;
+        GroupUpdateKeyBundle group_update_key_bundle = 6;
     };
 }

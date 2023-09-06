@@ -32,11 +32,11 @@ message GroupSession {
     string version = 1;
     string e2ee_pack_id = 2;
     string session_id = 3;
-    E2eeAddress session_owner = 4;
-    GroupInfo group_info = 5;
-    uint32 sequence = 6;
-    bytes chain_key = 7;
-    bytes signature_private_key = 8;
-    bytes signature_public_key = 9;
+    E2eeAddress sender = 4;
+    E2eeAddress session_owner = 5;
+    GroupInfo group_info = 6;
+    uint32 sequence = 7;
+    bytes chain_key = 8;
+    bytes group_seed = 9;
     bytes associated_data = 10;
 }
