@@ -34,11 +34,12 @@ message RegisterUserResponse {
     string msg = 2;
 
     E2eeAddress address = 3;
-    string password = 4;
-    string auth = 5;
-    int64 expires_in = 6;
+    string username = 4;
+    string password = 5;
+    string auth = 6;
+    int64 expires_in = 7;
 
-    repeated E2eeAddress other_device_addresses = 7;
-    repeated E2eeAddress other_user_addresses = 8;
-    repeated GroupInfo group_info_list = 9;
+    repeated E2eeAddress other_device_addresses = 11;
+    repeated E2eeAddress other_user_addresses = 12;
+    repeated GroupInfo group_info_list = 13;
 }
