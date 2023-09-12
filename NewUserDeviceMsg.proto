@@ -30,5 +30,5 @@ import "skissm/GroupInfo.proto";
 
 message NewUserDeviceMsg {
     E2eeAddress user_address = 1;
-    repeated GroupInfo group_info_list = 2;
+    E2eeAddress inviter_address = 2;
 }
