@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "AddGroupMemberDeviceResponseProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+import "skissm/GroupMember.proto";
+import "skissm/GroupMemberInfo.proto";
+import "skissm/ResponseCode.proto";
+
+message AddGroupMemberDeviceResponse {
+    ResponseCode code = 1;
+    string msg = 2;
+
+    repeated GroupMember group_members = 3;
+    GroupMemberInfo adding_member_device_info = 4;
+}
