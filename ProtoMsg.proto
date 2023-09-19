@@ -26,6 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/AcceptMsg.proto";
+import "skissm/AddGroupMemberDeviceMsg.proto";
 import "skissm/AddGroupMembersMsg.proto";
 import "skissm/AcquireSyncMsg.proto";
 import "skissm/ClientHeartbeatMsg.proto";
@@ -58,18 +59,22 @@ message ProtoMsg {
         F2fInviteMsg f2f_invite_msg = 24;
         F2fAcceptMsg f2f_accept_msg = 25;
         NewUserDeviceMsg new_user_device_msg = 26;
-        CreateGroupMsg create_group_msg = 27;
-        AddGroupMembersMsg add_group_members_msg = 28;
-        RemoveGroupMembersMsg remove_group_members_msg = 29;
-        E2eeMsg e2ee_msg = 30;
 
-        UpdateUserMsg update_user_msg = 41;
+        CreateGroupMsg create_group_msg = 41;
+        AddGroupMembersMsg add_group_members_msg = 42;
+        RemoveGroupMembersMsg remove_group_members_msg = 43;
+        RemoveGroupMembersMsg remove_group_members_msg = 44;
+        AddGroupMemberDeviceMsg add_group_member_device_msg = 45;
 
-        FriendManagerMsg friend_manager_msg = 51;
-        GroupManagerMsg group_manager_msg = 52;
-        SystemManagerMsg system_manager_msg = 53;
+        E2eeMsg e2ee_msg = 51;
 
-        ClientHeartbeatMsg client_heartbeat_msg = 61;
-        ServerHeartbeatMsg server_heartbeat_msg = 62;
+        UpdateUserMsg update_user_msg = 61;
+
+        FriendManagerMsg friend_manager_msg = 91;
+        GroupManagerMsg group_manager_msg = 92;
+        SystemManagerMsg system_manager_msg = 93;
+
+        ClientHeartbeatMsg client_heartbeat_msg = 101;
+        ServerHeartbeatMsg server_heartbeat_msg = 102;
     };
 }
