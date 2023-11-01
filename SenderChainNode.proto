@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/ChainKey.proto";
 
 message SenderChainNode {
-    bytes ratchet_key = 1;
+    repeated bytes ratchet_key = 1;
     ChainKey chain_key = 2;
 }
