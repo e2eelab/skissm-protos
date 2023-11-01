@@ -38,6 +38,7 @@ import "skissm/F2fAcceptMsg.proto";
 import "skissm/F2fInviteMsg.proto";
 import "skissm/GroupManagerMsg.proto";
 import "skissm/InviteMsg.proto";
+import "skissm/LeaveGroupMsg.proto";
 import "skissm/NewUserDeviceMsg.proto";
 import "skissm/ProtoMsgTag.proto";
 import "skissm/RemoveGroupMembersMsg.proto";
@@ -64,6 +65,7 @@ message ProtoMsg {
         AddGroupMembersMsg add_group_members_msg = 42;
         RemoveGroupMembersMsg remove_group_members_msg = 43;
         AddGroupMemberDeviceMsg add_group_member_device_msg = 44;
+        LeaveGroupMsg leave_group_msg = 45;
 
         E2eeMsg e2ee_msg = 51;
 

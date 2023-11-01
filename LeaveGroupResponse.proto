@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "LeaveGroupResponseProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+import "skissm/E2eeAddress.proto";
+import "skissm/ResponseCode.proto";
+
+message LeaveGroupResponse {
+    ResponseCode code = 1;
+    string msg = 2;
+
+    E2eeAddress leave_group_member_address = 3;
+    E2eeAddress group_address = 4;
+}
