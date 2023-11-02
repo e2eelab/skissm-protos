@@ -26,7 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message GetPreKeyBundleRequest {
-    string domain = 1;
-    string user_id = 2;
-    string device_id = 3;
+    string domain = 1;          // The domain
+    string user_id = 2;         // The user's ID
+    string device_id = 3;       // The user's device ID
 }

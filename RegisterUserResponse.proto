@@ -30,11 +30,11 @@ import "skissm/GroupInfo.proto";
 import "skissm/ResponseCode.proto";
 
 message RegisterUserResponse {
-    ResponseCode code = 1;
-    string msg = 2;
+    ResponseCode code = 1;                                      // The response code given by the server
+    string msg = 2;                                             // The message given by the server
 
-    E2eeAddress address = 3;
-    string username = 4;
+    E2eeAddress address = 3;                                    // The user's address
+    string username = 4;                                        // The user's name
     string password = 5;
     string auth = 6;
     int64 expires_in = 7;

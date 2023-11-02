@@ -42,7 +42,7 @@ enum PendingRequestType {
 }
 
 message PendingRequest {
-    PendingRequestType type = 1;
+    PendingRequestType type = 1;                // The type of the pending request
     bytes request_data = 2;
     repeated bytes request_args = 3;
 }

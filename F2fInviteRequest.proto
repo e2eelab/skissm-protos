@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/F2fInviteMsg.proto";
 
 message F2fInviteRequest {
-    F2fInviteMsg msg = 1;
+    F2fInviteMsg msg = 1;               // Include the F2fInviteMsg proto
 }

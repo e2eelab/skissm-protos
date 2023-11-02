@@ -28,8 +28,8 @@ option swift_prefix="Swift";
 import "skissm/KeyPair.proto";
 
 message SignedPreKey {
-    uint32 spk_id = 1;
-    KeyPair key_pair = 2;
-    bytes signature = 3;
+    uint32 spk_id = 1;          // The signed pre-key ID
+    KeyPair key_pair = 2;       // The signed pre-key pair
+    bytes signature = 3;        // The signature
     int64 ttl = 4;
 }

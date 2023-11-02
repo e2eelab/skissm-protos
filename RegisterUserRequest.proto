@@ -30,14 +30,14 @@ import "skissm/SignedPreKeyPublic.proto";
 import "skissm/OneTimePreKeyPublic.proto";
 
 message RegisterUserRequest {
-    string user_name = 1;
-    string user_id = 2;
-    string device_id = 3;
+    string user_name = 1;                                       // The user's name
+    string user_id = 2;                                         // The user's ID
+    string device_id = 3;                                       // The ID of the user's device
     string authenticator = 4;
     string auth_code = 5;
 
-    string e2ee_pack_id = 11;
-    IdentityKeyPublic identity_key_public = 12;
-    SignedPreKeyPublic signed_pre_key_public = 13;
-    repeated OneTimePreKeyPublic one_time_pre_keys = 14;
+    string e2ee_pack_id = 11;                                   // The e2ee pack ID
+    IdentityKeyPublic identity_key_public = 12;                 // The public part of the identity key pair
+    SignedPreKeyPublic signed_pre_key_public = 13;              // The public part of the signed pre-key pair
+    repeated OneTimePreKeyPublic one_time_pre_keys = 14;        // The public part of all of the user's one-time pre-key pairs
 }

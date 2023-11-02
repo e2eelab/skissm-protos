@@ -29,14 +29,14 @@ import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
 
 message GroupSession {
-    string version = 1;
-    string e2ee_pack_id = 2;
-    string session_id = 3;
-    E2eeAddress sender = 4;
-    E2eeAddress session_owner = 5;
-    GroupInfo group_info = 6;
-    uint32 sequence = 7;
-    bytes chain_key = 8;
+    string version = 1;                 // The version
+    string e2ee_pack_id = 2;            // The e2ee pack ID
+    string session_id = 3;              // The group session ID
+    E2eeAddress sender = 4;             // The sender's address
+    E2eeAddress session_owner = 5;      // The group session owner's address
+    GroupInfo group_info = 6;           // The group information
+    uint32 sequence = 7;                // The sequence of the chain key
+    bytes chain_key = 8;                // The chain key
     bytes group_seed = 9;
-    bytes associated_data = 10;
+    bytes associated_data = 10;         // The associated data
 }

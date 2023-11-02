@@ -27,6 +27,6 @@ option swift_prefix="Swift";
 
 message GroupMsgPayload {
     uint32 sequence = 1;
-    bytes ciphertext = 2;
-    bytes signature = 3;
+    bytes ciphertext = 2;       // The ciphertext
+    bytes signature = 3;        // The signature signed by the sender
 }

@@ -28,8 +28,8 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 message AcceptMsg {
-    E2eeAddress from = 1;
-    E2eeAddress to = 2;
-    string e2ee_pack_id = 3;
+    E2eeAddress from = 1;                   // The sender's address
+    E2eeAddress to = 2;                     // The receiver's address
+    string e2ee_pack_id = 3;                // The e2ee pack ID
     repeated bytes pre_shared_keys = 4;
 }

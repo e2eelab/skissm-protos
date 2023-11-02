@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/MsgKey.proto";
 
 message SkippedMsgKeyNode {
-    bytes ratchet_key_public = 1;
-    MsgKey msg_key = 2;
+    bytes ratchet_key_public = 1;       // The public part of the ratchet key
+    MsgKey msg_key = 2;                 // The MsgKey proto
 }

@@ -26,6 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message ChainKey {
-    uint32 index = 1;
-    bytes shared_key = 2;
+    uint32 index = 1;           // The index of the chain key
+    bytes shared_key = 2;       // The chain key data
 }

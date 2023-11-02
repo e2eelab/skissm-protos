@@ -29,7 +29,7 @@ import "skissm/ResponseCode.proto";
 import "skissm/SignedPreKeyPublic.proto";
 
 message F2fInviteResponse {
-    ResponseCode code = 1;
-    string msg = 2;
-    SignedPreKeyPublic spk_public = 3;
+    ResponseCode code = 1;                      // The response code given by the server
+    string msg = 2;                             // The message given by the server
+    SignedPreKeyPublic spk_public = 3;          // The public part of the signed pre-key pair
 }

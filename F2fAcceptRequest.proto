@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/F2fAcceptMsg.proto";
 
 message F2fAcceptRequest {
-    F2fAcceptMsg msg = 1;
+    F2fAcceptMsg msg = 1;               // Include the F2fAcceptMsg proto
 }

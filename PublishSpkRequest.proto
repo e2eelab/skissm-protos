@@ -29,6 +29,6 @@ import "skissm/E2eeAddress.proto";
 import "skissm/SignedPreKeyPublic.proto";
 
 message PublishSpkRequest {
-    E2eeAddress user_address = 1;
-    SignedPreKeyPublic signed_pre_key_public = 2;
+    E2eeAddress user_address = 1;                       // The user's address
+    SignedPreKeyPublic signed_pre_key_public = 2;       // The public part of the signed pre-key pair
 }

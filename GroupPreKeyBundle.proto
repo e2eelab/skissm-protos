@@ -29,12 +29,12 @@ import "skissm/E2eeAddress.proto";
 import "skissm/GroupInfo.proto";
 
 message GroupPreKeyBundle {
-    string version = 1;
-    string e2ee_pack_id = 2;
-    E2eeAddress sender = 3;
-    string session_id = 4;
-    string old_session_id = 5;
-    GroupInfo group_info = 6;
+    string version = 1;             // The version
+    string e2ee_pack_id = 2;        // The e2ee pack ID
+    E2eeAddress sender = 3;         // The sender's address
+    string session_id = 4;          // The session ID
+    string old_session_id = 5;      // The old session ID(optional)
+    GroupInfo group_info = 6;       // The group information
     uint32 sequence = 7;
     bytes group_seed = 8;
 }

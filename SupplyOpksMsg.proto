@@ -29,6 +29,6 @@ import "skissm/E2eeAddress.proto";
 
 message SupplyOpksMsg {
     int64 server_t = 1;
-    uint32 opks_num = 2;
-    E2eeAddress user_address = 3;
+    uint32 opks_num = 2;                // The number of one-time pre-keys needed to be upload
+    E2eeAddress user_address = 3;       // The user's address
 }

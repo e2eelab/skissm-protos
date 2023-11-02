@@ -26,6 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message KeyPair {
-    bytes public_key = 1;
-    bytes private_key = 2;
+    bytes public_key = 1;           // The public key
+    bytes private_key = 2;          // The private key
 }

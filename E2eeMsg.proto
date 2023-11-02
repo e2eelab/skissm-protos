@@ -30,11 +30,11 @@ import "skissm/One2oneMsgPayload.proto";
 import "skissm/GroupMsgPayload.proto";
 
 message E2eeMsg {
-    string version = 1;
-    E2eeAddress from = 2;
-    E2eeAddress to = 3;
+    string version = 1;                             // The version
+    E2eeAddress from = 2;                           // The sender's address
+    E2eeAddress to = 3;                             // The receiver's address
     string msg_id = 4;
-    string session_id = 5;
+    string session_id = 5;                          // The session ID
     uint32 notif_level = 6;
     oneof payload {
         One2oneMsgPayload one2one_msg = 11;

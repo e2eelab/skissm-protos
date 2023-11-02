@@ -29,9 +29,9 @@ import "skissm/PreKeyBundle.proto";
 import "skissm/ResponseCode.proto";
 
 message GetPreKeyBundleResponse {
-   ResponseCode code = 1;
-    string msg = 2;
+   ResponseCode code = 1;                           // The response code given by the server
+    string msg = 2;                                 // The message given by the server
 
-    string user_id = 3;
-    repeated PreKeyBundle pre_key_bundles = 4;
+    string user_id = 3;                             // The user's ID
+    repeated PreKeyBundle pre_key_bundles = 4;      // The user's pre-key bundles from every device
 }

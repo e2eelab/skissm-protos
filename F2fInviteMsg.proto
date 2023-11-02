@@ -28,8 +28,8 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 message F2fInviteMsg {
-    string e2ee_pack_id = 1;
-    E2eeAddress from = 2;
-    E2eeAddress to = 3;
+    string e2ee_pack_id = 1;        // The e2ee pack ID
+    E2eeAddress from = 2;           // The sender's address
+    E2eeAddress to = 3;             // The receiver's address
     bytes secret_msg = 4;
 }

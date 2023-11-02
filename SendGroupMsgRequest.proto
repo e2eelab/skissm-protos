@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/E2eeMsg.proto";
 
 message SendGroupMsgRequest {
-    E2eeMsg msg = 1;
+    E2eeMsg msg = 1;            // Include the E2eeMsg proto
 }

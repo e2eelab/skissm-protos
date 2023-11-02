@@ -28,7 +28,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message OneTimePreKey {
-    uint32 opk_id = 1;
-    bool used = 2;
-    KeyPair key_pair = 3;
+    uint32 opk_id = 1;          // The one-time pre-key ID
+    bool used = 2;              // This one-time pre-key is used or not
+    KeyPair key_pair = 3;       // The one-time pre-key data
 }

@@ -11,9 +11,9 @@ import "skissm/E2eeAddress.proto";
 import "skissm/ResponseCode.proto";
 
 message LeaveGroupResponse {
-    ResponseCode code = 1;
-    string msg = 2;
+    ResponseCode code = 1;                              // The response code given by the server
+    string msg = 2;                                     // The message given by the server
 
-    E2eeAddress leave_group_member_address = 3;
-    E2eeAddress group_address = 4;
+    E2eeAddress leave_group_member_address = 3;         // The address of the user leaving the group
+    E2eeAddress group_address = 4;                      // The group address
 }
