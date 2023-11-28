@@ -35,11 +35,12 @@ message RegisterUserResponse {
 
     E2eeAddress address = 3;                                    // The user's address
     string username = 4;                                        // The user's name
-    string password = 5;
-    string auth = 6;
-    int64 expires_in = 7;
+    string password = 5;                                        // The password
+    string auth = 6;                                            // The authorization token
+    int64 expires_in = 7;                                       // The expiry time of authorization token
+    string authenticator = 8;                                   // The optional authenticator that is bound to this userId
 
-    repeated E2eeAddress other_device_addresses = 11;
-    repeated E2eeAddress other_user_addresses = 12;
-    repeated GroupInfo group_info_list = 13;
+    repeated E2eeAddress other_device_addresses = 11;           // The addresses of other devices that is created with this userId
+    repeated E2eeAddress other_user_addresses = 12;             // The addresses of other users who had built session with this userId
+    repeated GroupInfo group_info_list = 13;                    // The info of groups that had been created or joined by this userId
 }
