@@ -28,14 +28,14 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 enum FriendOp {
-    ADDING_SEND = 0;
-    ADDING_RECEIVE = 1;
-    ADDED = 2;
-    BLOCKED = 3;
-    UNBLOCKED = 4;
-    REMOVED = 5;
-    UPDATE_MEMONAME = 6;
-    RECOMMEND = 7;
+    FRIEND_OP_ADDING_SEND = 0;
+    FRIEND_OP_ADDING_RECEIVE = 1;
+    FRIEND_OP_ADDED = 2;
+    FRIEND_OP_BLOCKED = 3;
+    FRIEND_OP_UNBLOCKED = 4;
+    FRIEND_OP_REMOVED = 5;
+    FRIEND_OP_UPDATE_MEMONAME = 6;
+    FRIEND_OP_RECOMMEND = 7;
 }
 
 message FriendshipDTO {
