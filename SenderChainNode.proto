@@ -28,6 +28,7 @@ option swift_prefix="Swift";
 import "skissm/ChainKey.proto";
 
 message SenderChainNode {
-    repeated bytes ratchet_key = 1;     // The private part of the ratchet key pair
-    ChainKey chain_key = 2;             // The chain key
+    bytes our_ratchet_public_key = 1;       // The public part of the ratchet key pair in ECC or the ciphertext of the encapsulation in PQC
+    bytes their_ratchet_public_key = 2;     // Their ratchet public key
+    ChainKey chain_key = 3;                 // The chain key
 }

@@ -33,8 +33,10 @@ message InviteMsg {
     string session_id = 3;                      // The session ID
     E2eeAddress from = 4;                       // The sender's address
     E2eeAddress to = 5;                         // The receiver's address
-    bytes alice_identity_key = 6;
-    repeated bytes pre_shared_keys = 7;
-    uint32 bob_signed_pre_key_id = 8;
-    uint32 bob_one_time_pre_key_id = 9;
+    bytes alice_identity_key = 6;               // The inviter's identity key
+    bytes alice_ephemeral_key = 7;              // The inviter's ephemeral key, empty in PQC
+    bytes alice_base_key = 8;                   // The inviter's base key(the first ratchet public key)
+    repeated bytes encaps_ciphertext_list = 9;  // The ciphertext encapsulated by the invitee's pre-key bundle, empty in ECC
+    uint32 bob_signed_pre_key_id = 10;          // The invitee's signed pre-key ID
+    uint32 bob_one_time_pre_key_id = 11;        // The invitee's one-time pre-key ID
 }

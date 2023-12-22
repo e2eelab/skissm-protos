@@ -26,26 +26,30 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
+import "skissm/KeyPair.proto";
 import "skissm/Ratchet.proto";
 
 message Session {
-    string version = 1;                     // The version
-    string e2ee_pack_id = 2;                // The e2ee pack ID
-    string session_id = 3;                  // The session ID
-    E2eeAddress session_owner = 4;          // The session owner's address
-    E2eeAddress from = 5;                   // The sender's address
-    E2eeAddress to = 6;                     // The receiver's address
-    Ratchet ratchet = 7;                    // The ratchet proto
-    bytes alice_identity_key = 8;           // The sender's identity key
-    bytes alice_ephemeral_key = 9;
-    bytes bob_signed_pre_key = 10;          // The receiver's signed pre-key
-    uint32 bob_signed_pre_key_id = 11;      // The receiver's signed pre-key ID
-    bytes bob_one_time_pre_key = 12;        // The receiver's one-time pre-key
-    uint32 bob_one_time_pre_key_id = 13;    // The receiver's one-time pre-key ID
-    bytes associated_data = 14;             // The associated data
+    string version = 1;                             // The version
+    string e2ee_pack_id = 2;                        // The e2ee pack ID
+    string session_id = 3;                          // The session ID
+    E2eeAddress our_address = 4;                    // Our address
+    E2eeAddress their_address = 5;                  // Their address
 
-    bool f2f = 15;                          // The session is face-to-face or not
-    bool responded = 16;                    // The receiver has responded or not
-    int64 t_invite = 17;
-    repeated bytes pre_shared_keys = 18;
+    Ratchet ratchet = 11;                           // The ratchet proto
+    bytes associated_data = 12;                     // The associated data
+    bytes temp_shared_secret = 13;                  // The shared secret encapsulated by the invitee's pre-key bundle, empty in ECC
+
+    bytes alice_identity_key = 21;                  // The inviter's identity key
+    bytes alice_ephemeral_key = 22;                 // The inviter's ephemeral key, empty in PQC
+    KeyPair alice_base_key = 23;                    // The inviter's base key pair
+    bytes bob_signed_pre_key = 24;                  // The invitee's signed pre-key
+    uint32 bob_signed_pre_key_id = 25;              // The invitee's signed pre-key ID
+    bytes bob_one_time_pre_key = 26;                // The invitee's one-time pre-key
+    uint32 bob_one_time_pre_key_id = 27;            // The invitee's one-time pre-key ID
+    repeated bytes encaps_ciphertext_list = 28;     // The ciphertext encapsulated by the invitee's pre-key bundle, empty in ECC
+
+    bool f2f = 31;                                  // The session is face-to-face or not
+    bool responded = 32;                            // The invitee has responded or not
+    int64 t_invite = 33;
 }
