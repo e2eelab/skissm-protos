@@ -19,25 +19,14 @@
 syntax = "proto3";
 
 package skissm;
-
+ 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "PlaintextProto";
+option java_outer_classname = "UserDevicesIDProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
-
-import "skissm/UserDevicesID.proto";
-import "skissm/Session.proto";
-import "skissm/GroupPreKeyBundle.proto";
-import "skissm/GroupUpdateKeyBundle.proto";
-
-message Plaintext {
-    string version = 1;
-    oneof payload {
-        UserDevicesID their_device_id_list = 2;
-        bytes common_msg = 3;
-        bytes common_sync_msg = 4;
-        Session f2f_session_data = 5;
-        GroupPreKeyBundle group_pre_key_bundle = 6;
-        GroupUpdateKeyBundle group_update_key_bundle = 7;
-    };
+ 
+message UserDevicesID {
+    string domain = 1;              // The domain
+    string user_id = 2;             // The user's ID
+    repeated string device_id = 3;  // All of the user's devices ID
 }
