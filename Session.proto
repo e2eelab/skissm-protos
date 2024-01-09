@@ -29,6 +29,13 @@ import "skissm/E2eeAddress.proto";
 import "skissm/KeyPair.proto";
 import "skissm/Ratchet.proto";
 
+message EncapsCiphertexts {
+    uint32 ciphertext_num = 1;
+    bytes ciphertext_2 = 2;
+    bytes ciphertext_3 = 3;
+    bytes ciphertext_4 = 4;
+}
+
 message Session {
     string version = 1;                             // The version
     string e2ee_pack_id = 2;                        // The e2ee pack ID
@@ -39,17 +46,17 @@ message Session {
     Ratchet ratchet = 11;                           // The ratchet proto
     bytes associated_data = 12;                     // The associated data
     bytes temp_shared_secret = 13;                  // The shared secret encapsulated by the invitee's pre-key bundle, empty in ECC
+    bytes fingerprint = 14;
 
-    bytes alice_identity_key = 21;                  // The inviter's identity key
-    bytes alice_ephemeral_key = 22;                 // The inviter's ephemeral key, empty in PQC
-    KeyPair alice_base_key = 23;                    // The inviter's base key pair
-    bytes bob_signed_pre_key = 24;                  // The invitee's signed pre-key
-    uint32 bob_signed_pre_key_id = 25;              // The invitee's signed pre-key ID
-    bytes bob_one_time_pre_key = 26;                // The invitee's one-time pre-key
-    uint32 bob_one_time_pre_key_id = 27;            // The invitee's one-time pre-key ID
-    repeated bytes encaps_ciphertext_list = 28;     // The ciphertext encapsulated by the invitee's pre-key bundle, empty in ECC
+    KeyPair alice_base_key = 21;                    // The inviter's base key pair
+    uint32 bob_signed_pre_key_id = 22;              // The invitee's signed pre-key ID
+    uint32 bob_one_time_pre_key_id = 23;            // The invitee's one-time pre-key ID
+    oneof pre_shared_input {
+        bytes alice_ephemeral_key = 24;             // The inviter's ephemeral key
+        EncapsCiphertexts ciphertext_list = 25;     // The ciphertext encapsulated by the invitee's pre-key bundle
+    }
 
     bool f2f = 31;                                  // The session is face-to-face or not
     bool responded = 32;                            // The invitee has responded or not
-    int64 t_invite = 33;
+    int64 invite_t = 33;
 }

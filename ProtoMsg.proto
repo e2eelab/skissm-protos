@@ -34,8 +34,6 @@ import "skissm/CreateGroupMsg.proto";
 import "skissm/E2eeAddress.proto";
 import "skissm/E2eeMsg.proto";
 import "skissm/FriendManagerMsg.proto";
-import "skissm/F2fAcceptMsg.proto";
-import "skissm/F2fInviteMsg.proto";
 import "skissm/GroupManagerMsg.proto";
 import "skissm/InviteMsg.proto";
 import "skissm/LeaveGroupMsg.proto";
@@ -57,9 +55,7 @@ message ProtoMsg {
         SupplyOpksMsg supply_opks_msg = 21;
         InviteMsg invite_msg = 22;
         AcceptMsg accept_msg = 23;
-        F2fInviteMsg f2f_invite_msg = 24;
-        F2fAcceptMsg f2f_accept_msg = 25;
-        NewUserDeviceMsg new_user_device_msg = 26;
+        NewUserDeviceMsg new_user_device_msg = 24;
 
         CreateGroupMsg create_group_msg = 41;
         AddGroupMembersMsg add_group_members_msg = 42;

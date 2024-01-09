@@ -26,7 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/UserDevicesID.proto";
-import "skissm/Session.proto";
 import "skissm/GroupPreKeyBundle.proto";
 import "skissm/GroupUpdateKeyBundle.proto";
 
@@ -36,8 +35,7 @@ message Plaintext {
         UserDevicesID their_device_id_list = 2;
         bytes common_msg = 3;
         bytes common_sync_msg = 4;
-        Session f2f_session_data = 5;
-        GroupPreKeyBundle group_pre_key_bundle = 6;
-        GroupUpdateKeyBundle group_update_key_bundle = 7;
+        GroupPreKeyBundle group_pre_key_bundle = 5;
+        GroupUpdateKeyBundle group_update_key_bundle = 6;
     };
 }
