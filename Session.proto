@@ -38,7 +38,7 @@ message EncapsCiphertexts {
 
 message Session {
     string version = 1;                             // The version
-    string e2ee_pack_id = 2;                        // The e2ee pack ID
+    uint32 e2ee_pack_id = 2;                        // The e2ee pack ID
     string session_id = 3;                          // The session ID
     E2eeAddress our_address = 4;                    // Our address
     E2eeAddress their_address = 5;                  // Their address

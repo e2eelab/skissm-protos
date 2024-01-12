@@ -30,7 +30,7 @@ import "skissm/GroupInfo.proto";
 
 message GroupSession {
     string version = 1;                 // The version
-    string e2ee_pack_id = 2;            // The e2ee pack ID
+    uint32 e2ee_pack_id = 2;            // The e2ee pack ID
     string session_id = 3;              // The group session ID
     E2eeAddress sender = 4;             // The sender's address
     E2eeAddress session_owner = 5;      // The group session owner's address

@@ -12,7 +12,7 @@ import "skissm/GroupInfo.proto";
 import "skissm/GroupMemberInfo.proto";
 
 message AddGroupMemberDeviceMsg {
-    string e2ee_pack_id = 1;                        // The e2ee pack ID
+    uint32 e2ee_pack_id = 1;                        // The e2ee pack ID
     E2eeAddress sender_address = 2;                 // The sender's address
     uint32 sequence = 3;
     GroupInfo group_info = 4;                       // The group infomation, including the group name, the group address and all of the group members

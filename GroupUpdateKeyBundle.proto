@@ -31,7 +31,7 @@ import "skissm/GroupMemberInfo.proto";
 
 message GroupUpdateKeyBundle {
     string version = 1;
-    string e2ee_pack_id = 2;
+    uint32 e2ee_pack_id = 2;
     E2eeAddress sender = 3;
     bool adding = 4;
     string session_id = 5;
