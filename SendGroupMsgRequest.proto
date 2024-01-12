@@ -25,8 +25,11 @@ option java_outer_classname = "SendGroupMsgRequestProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+import "skissm/E2eeAddress.proto";
 import "skissm/E2eeMsg.proto";
 
 message SendGroupMsgRequest {
-    E2eeMsg msg = 1;            // Include the E2eeMsg proto
+    E2eeMsg msg = 1;                            // The msg with GroupMsgPayload
+    repeated E2eeAddress allow_list = 2;        // Optional allow list
+    repeated E2eeAddress deny_list = 3;         // Optional deny list
 }

@@ -28,10 +28,10 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 enum UpdateUserOp {
-    UPDATE_USER_NAME = 0;
-    UPDATE_USER_AVATAR = 1;
-    UPDATE_USER_STATE = 2;
-    UPDATE_USER_PRIVACY = 3;
+    UPDATE_USER_OP_NAME = 0;
+    UPDATE_USER_OP_AVATAR = 1;
+    UPDATE_USER_OP_STATE = 2;
+    UPDATE_USER_OP_PRIVACY = 3;
 }
 
 message UpdateUserNameArg {
@@ -39,7 +39,7 @@ message UpdateUserNameArg {
 }
 
 message UpdateUserAvatarArg {
-    string userAvatarUrl = 1;
+    string user_avatar_url = 1;
 }
 
 message UpdateUserStateArg {
@@ -51,7 +51,7 @@ message UpdateUserPrivacyArg {
 }
 
 message UpdateUserMsg {
-    int64 modifiedDate = 1;
+    int64 modified_date = 1;
     E2eeAddress user_address = 2;
     UpdateUserOp op = 3;
     oneof arg {
