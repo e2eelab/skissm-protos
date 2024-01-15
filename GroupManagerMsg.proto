@@ -42,7 +42,7 @@ enum GroupOp {
 
 message CreateGroupArg {
     E2eeAddress creator_address = 1;
-    repeated GroupMember group_members = 2;
+    repeated GroupMember group_member_list = 2;
 }
 
 message UpdateGroupNameArg {
@@ -57,12 +57,12 @@ message UpdateGroupAvatarArg {
 
 message UpdateGroupAdminsArg {
     E2eeAddress user_address = 1;
-    repeated GroupMember group_admins = 2;
+    repeated GroupMember group_admin_list = 2;
 }
 
 message AddGroupMembersArg {
     E2eeAddress user_address = 1;
-    repeated GroupMember added_members = 2;
+    repeated GroupMember added_member_list = 2;
 }
 
 message JoinGroupArg {
@@ -72,7 +72,7 @@ message JoinGroupArg {
 
 message RemoveGroupMembersArg {
     E2eeAddress user_address = 1;
-    repeated GroupMember removed_members = 2;
+    repeated GroupMember removed_member_list = 2;
 }
 
 message DestroyGroupArg {

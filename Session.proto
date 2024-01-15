@@ -29,13 +29,6 @@ import "skissm/E2eeAddress.proto";
 import "skissm/KeyPair.proto";
 import "skissm/Ratchet.proto";
 
-message EncapsCiphertexts {
-    uint32 ciphertext_num = 1;
-    bytes ciphertext_2 = 2;
-    bytes ciphertext_3 = 3;
-    bytes ciphertext_4 = 4;
-}
-
 message Session {
     string version = 1;                             // The version
     uint32 e2ee_pack_id = 2;                        // The e2ee pack ID
@@ -51,10 +44,7 @@ message Session {
     KeyPair alice_base_key = 21;                    // The inviter's base key pair
     uint32 bob_signed_pre_key_id = 22;              // The invitee's signed pre-key ID
     uint32 bob_one_time_pre_key_id = 23;            // The invitee's one-time pre-key ID
-    oneof pre_shared_input {
-        bytes alice_ephemeral_key = 24;             // The inviter's ephemeral key
-        EncapsCiphertexts ciphertext_list = 25;     // The ciphertext encapsulated by the invitee's pre-key bundle
-    }
+    repeated bytes pre_shared_input_list = 24;      // The data that needs to generate some shared secret
 
     bool f2f = 31;                                  // The session is face-to-face or not
     bool responded = 32;                            // The invitee has responded or not

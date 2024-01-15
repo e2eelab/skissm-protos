@@ -26,7 +26,7 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
  
 message UserDevicesID {
-    string domain = 1;              // The domain
-    string user_id = 2;             // The user's ID
-    repeated string device_id = 3;  // All of the user's devices ID
+    string domain = 1;                      // The domain
+    string user_id = 2;                     // The user's ID
+    repeated string device_id_list = 3;     // All of the user's devices ID
 }

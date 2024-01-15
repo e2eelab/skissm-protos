@@ -33,6 +33,7 @@ message AddGroupMembersResponse {
     ResponseCode code = 1;                                      // The response code given by the server
     string msg = 2;                                             // The message given by the server
 
-    repeated GroupMember group_members = 3;                     // The group members
-    repeated GroupMemberInfo adding_member_info_list = 4;       // The adding group members' information
+    repeated GroupMember added_group_member_list = 3;           // The added group members
+    repeated GroupMember group_member_list = 4;                 // The group members
+    repeated GroupMemberInfo adding_member_info_list = 5;       // The adding group members' information
 }

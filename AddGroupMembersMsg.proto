@@ -35,6 +35,6 @@ message AddGroupMembersMsg {
     E2eeAddress sender_address = 2;                             // The sender's address
     uint32 sequence = 3;
     GroupInfo group_info = 4;                                   // The group infomation, including the group name, the group address and all of the group members
-    repeated GroupMember adding_members = 5;                    // The adding group members
+    repeated GroupMember adding_member_list = 5;                // The adding group members
     repeated GroupMemberInfo adding_member_info_list = 6;       // The adding group members' information
 }

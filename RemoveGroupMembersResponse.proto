@@ -33,6 +33,7 @@ message RemoveGroupMembersResponse {
     ResponseCode code = 1;                              // The response code given by the server
     string msg = 2;                                     // The message given by the server
 
-    repeated GroupMember group_members = 3;             // The group members
-    repeated GroupMemberInfo member_info_list = 4;      // The remaining group members' information
+    repeated GroupMember removed_group_member_list = 3; // The removed group members
+    repeated GroupMember group_member_list = 4;         // The group members
+    repeated GroupMemberInfo member_info_list = 5;      // The remaining group members' information
 }

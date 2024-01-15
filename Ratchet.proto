@@ -36,5 +36,5 @@ message Ratchet {
     uint32 received_message_sequence = 4;                   // The sequence of the received message
     SenderChainNode sender_chain = 5;                       // The sender chain
     ReceiverChainNode receiver_chain = 6;                   // The receiver chains
-    repeated SkippedMsgKeyNode skipped_msg_keys = 7;        // The skipped message keys
+    repeated SkippedMsgKeyNode skipped_msg_key_list = 7;    // The skipped message keys
 }

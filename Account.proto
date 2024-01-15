@@ -37,7 +37,7 @@ message Account {
 
     IdentityKey identity_key = 11;                      // The identity key pair
     SignedPreKey signed_pre_key = 12;                   // The signed pre-key pair
-    repeated OneTimePreKey one_time_pre_keys = 13;      // The one-time pre-key pairs
+    repeated OneTimePreKey one_time_pre_key_list = 13;  // The one-time pre-key pairs
     uint32 next_one_time_pre_key_id = 14;               // Next one-time pre-key pair ID
 
     bool saved = 21;                                    // The account is saved or not

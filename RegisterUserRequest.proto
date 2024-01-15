@@ -39,5 +39,5 @@ message RegisterUserRequest {
     uint32 e2ee_pack_id = 11;                                   // The e2ee pack ID
     IdentityKeyPublic identity_key_public = 12;                 // The public part of the identity key pair
     SignedPreKeyPublic signed_pre_key_public = 13;              // The public part of the signed pre-key pair
-    repeated OneTimePreKeyPublic one_time_pre_keys = 14;        // The public part of all of the user's one-time pre-key pairs
+    repeated OneTimePreKeyPublic one_time_pre_key_list = 14;    // The public part of all of the user's one-time pre-key pairs
 }
