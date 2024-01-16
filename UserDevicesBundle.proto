@@ -21,11 +21,11 @@ syntax = "proto3";
 package skissm;
  
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "UserDevicesIDProto";
+option java_outer_classname = "UserDevicesBundleProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
  
-message UserDevicesID {
+message UserDevicesBundle {
     string domain = 1;                      // The domain
     string user_id = 2;                     // The user's ID
     repeated string device_id_list = 3;     // All of the user's devices ID

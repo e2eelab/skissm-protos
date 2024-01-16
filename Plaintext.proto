@@ -25,17 +25,18 @@ option java_outer_classname = "PlaintextProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
-import "skissm/UserDevicesID.proto";
+import "skissm/UserDevicesBundle.proto";
 import "skissm/GroupPreKeyBundle.proto";
 import "skissm/GroupUpdateKeyBundle.proto";
 
 message Plaintext {
     string version = 1;
     oneof payload {
-        UserDevicesID their_device_id_list = 2;
-        bytes common_msg = 3;
-        bytes common_sync_msg = 4;
-        GroupPreKeyBundle group_pre_key_bundle = 5;
-        GroupUpdateKeyBundle group_update_key_bundle = 6;
+        bytes common_msg = 2;
+        bytes common_sync_msg = 3;
+
+        UserDevicesBundle user_devices_bundle = 11;
+        GroupPreKeyBundle group_pre_key_bundle = 12;
+        GroupUpdateKeyBundle group_update_key_bundle = 13;
     };
 }
