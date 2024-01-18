@@ -41,7 +41,6 @@ enum ResponseCode {
     RESPONSE_CODE_CREATED = 201;                  // The request succeeded, and some new resources were created as a result.
     RESPONSE_CODE_ACCEPTED = 202;                 // The request has been received but not yet acted upon.
     RESPONSE_CODE_NO_CONTENT = 204;               // There is no content to send for this request, and some resources were deleted.
-    RESPONSE_CODE_INVITED = 205;                  // The one the client invited has invited the client.
     RESPONSE_CODE_BAD_REQUEST = 400;              // The server cannot or will not process the request due to something that is perceived to be a client error.
     RESPONSE_CODE_UNAUTHORIZED = 401;             // The client is not authenticated to get the requested response.
     RESPONSE_CODE_FORBIDDEN = 403;                // The client is authenticated but does not have access rights to the content.

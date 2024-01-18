@@ -38,4 +38,5 @@ message InviteMsg {
     repeated bytes pre_shared_input_list = 8;   // The data that needs to generate some shared secret
     uint32 bob_signed_pre_key_id = 9;           // The invitee's signed pre-key ID
     uint32 bob_one_time_pre_key_id = 10;        // The invitee's one-time pre-key ID
+    int64 invite_t = 11;
 }
