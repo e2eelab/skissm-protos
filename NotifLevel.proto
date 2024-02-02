@@ -21,24 +21,16 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "E2eeMsgProto";
+option java_outer_classname = "NotifLevelProto";
 option objc_class_prefix = "Objc";
-option swift_prefix="Swift";
+option swift_prefix = "Swift";
 
-import "skissm/E2eeAddress.proto";
-import "skissm/NotifLevel.proto";
-import "skissm/One2oneMsgPayload.proto";
-import "skissm/GroupMsgPayload.proto";
-
-message E2eeMsg {
-    string version = 1;                             // The version
-    E2eeAddress from = 2;                           // The sender's address
-    E2eeAddress to = 3;                             // The receiver's address
-    string msg_id = 4;
-    string session_id = 5;                          // The session ID
-    NotifLevel notif_level = 6;
-    oneof payload {
-        One2oneMsgPayload one2one_msg = 11;
-        GroupMsgPayload group_msg = 12;
-    };
+/**
+ *  The notification level is used to identify the urgency of a message.
+ */
+enum NotifLevel {
+    NOTIF_LEVEL_NORMAL = 0;         // Server will not send push notification to device.
+    NOTIF_LEVEL_SESSION = 1;        // Server will forward msg for establishing session.
+    NOTIF_LEVEL_PUSH = 2;           // Server will send push notification to device.
+    NOTIF_LEVEL_STREAM = 3;         // Server will send push notification with streaming flags to device.
 }
