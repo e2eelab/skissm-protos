@@ -31,6 +31,6 @@ option swift_prefix = "Swift";
 enum NotifLevel {
     NOTIF_LEVEL_NORMAL = 0;         // Server will not send push notification to device.
     NOTIF_LEVEL_SESSION = 1;        // Server will forward msg for establishing session.
-    NOTIF_LEVEL_PUSH = 2;           // Server will send push notification to device.
-    NOTIF_LEVEL_STREAM = 3;         // Server will send push notification with streaming flags to device.
+    NOTIF_LEVEL_PUSH = 11;           // Server will send push notification to device.
+    NOTIF_LEVEL_STREAM = 12;         // Server will send push notification with streaming flags to device.
 }
