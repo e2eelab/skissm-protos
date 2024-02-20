@@ -30,4 +30,7 @@ import "skissm/ResponseCode.proto";
 message InviteResponse {
     ResponseCode code = 1;          // The response code given by the server
     string msg = 2;                 // The message given by the server
+
+    string session_id = 3;          // The session ID
+    int64 invite_t = 4;             // The server time of invitation for creating this session
 }

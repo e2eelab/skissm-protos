@@ -46,7 +46,8 @@ message Session {
     uint32 bob_one_time_pre_key_id = 23;            // The invitee's one-time pre-key ID
     repeated bytes pre_shared_input_list = 24;      // The data that needs to generate some shared secret
 
-    bool f2f = 31;                                  // The session is face-to-face or not
+    bool f2f = 31;                                  // The session is face-to-face verified or not
     bool responded = 32;                            // The invitee has responded or not
-    int64 invite_t = 33;
+    int64 invite_t = 33;                            // The server time of invitation for creating this session
+    bool short_term = 34;                           // The session is used for short term
 }
