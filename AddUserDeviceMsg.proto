@@ -21,13 +21,13 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "NewUserDeviceMsgProto";
+option java_outer_classname = "AddUserDeviceMsgProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 
-message NewUserDeviceMsg {
-    E2eeAddress user_address = 1;
-    E2eeAddress inviter_address = 2;
+message AddUserDeviceMsg {
+    E2eeAddress user_address = 1;                   // The added user e2ee address
+    repeated E2eeAddress old_address_list = 2;      // The list of other e2ee address that has the same user ID
 }

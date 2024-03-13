@@ -28,6 +28,7 @@ option swift_prefix="Swift";
 import "skissm/AcceptMsg.proto";
 import "skissm/AddGroupMemberDeviceMsg.proto";
 import "skissm/AddGroupMembersMsg.proto";
+import "skissm/AddUserDeviceMsg.proto";
 import "skissm/AcquireSyncMsg.proto";
 import "skissm/ClientHeartbeatMsg.proto";
 import "skissm/CreateGroupMsg.proto";
@@ -37,9 +38,9 @@ import "skissm/FriendManagerMsg.proto";
 import "skissm/GroupManagerMsg.proto";
 import "skissm/InviteMsg.proto";
 import "skissm/LeaveGroupMsg.proto";
-import "skissm/NewUserDeviceMsg.proto";
 import "skissm/ProtoMsgTag.proto";
 import "skissm/RemoveGroupMembersMsg.proto";
+import "skissm/RemoveUserDeviceMsg.proto";
 import "skissm/UpdateUserMsg.proto";
 import "skissm/SupplyOpksMsg.proto";
 import "skissm/ServerHeartbeatMsg.proto";
@@ -55,7 +56,8 @@ message ProtoMsg {
         SupplyOpksMsg supply_opks_msg = 21;
         InviteMsg invite_msg = 22;
         AcceptMsg accept_msg = 23;
-        NewUserDeviceMsg new_user_device_msg = 24;
+        AddUserDeviceMsg add_user_device_msg = 24;
+        RemoveUserDeviceMsg remove_user_device_msg = 25;
 
         CreateGroupMsg create_group_msg = 41;
         AddGroupMembersMsg add_group_members_msg = 42;
