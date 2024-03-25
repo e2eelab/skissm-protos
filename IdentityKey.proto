@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/KeyPair.proto";
 
 message IdentityKey {
-    KeyPair asym_key_pair = 1;
-    KeyPair sign_key_pair = 2;
+    KeyPair asym_key_pair = 1;      // The key pair for asymmetric encryption and decryption.
+    KeyPair sign_key_pair = 2;      // The key pair for signing and verifying signature.
 }

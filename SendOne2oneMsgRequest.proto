@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/E2eeMsg.proto";
 
 message SendOne2oneMsgRequest {
-    E2eeMsg msg = 1;            // Include the E2eeMsg proto
+    E2eeMsg msg = 1;            // The included msg for this request.
 }

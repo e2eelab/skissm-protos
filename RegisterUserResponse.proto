@@ -30,17 +30,17 @@ import "skissm/GroupInfo.proto";
 import "skissm/ResponseCode.proto";
 
 message RegisterUserResponse {
-    ResponseCode code = 1;                                      // The response code given by the server
-    string msg = 2;                                             // The message given by the server
+    ResponseCode code = 1;                                      // The response code given by the server.
+    string msg = 2;                                             // The message given by the server.
 
-    E2eeAddress address = 3;                                    // The user's address
-    string username = 4;                                        // The user's name
-    string password = 5;                                        // The password
-    string auth = 6;                                            // The authorization token
-    int64 expires_in = 7;                                       // The expiry time of authorization token
-    string authenticator = 8;                                   // The optional authenticator that is bound to this userId
+    E2eeAddress address = 3;                                    // The user's address.
+    string username = 4;                                        // The user's name.
+    string password = 5;                                        // The password.
+    string auth = 6;                                            // The authorization token.
+    int64 expires_in = 7;                                       // The expiry time of authorization token.
+    string authenticator = 8;                                   // The optional authenticator that is bound to this userId.
 
-    repeated E2eeAddress other_device_address_list = 11;        // The addresses of other devices that is created with this userId
-    repeated E2eeAddress other_user_address_list = 12;          // The addresses of other users who had built session with this userId
-    repeated GroupInfo group_info_list = 13;                    // The info of groups that had been created or joined by this userId
+    repeated E2eeAddress other_device_address_list = 11;        // The addresses of other devices that is created with this userId.
+    repeated E2eeAddress other_user_address_list = 12;          // The addresses of other users who had built session with this userId.
+    repeated GroupInfo group_info_list = 13;                    // The information of groups that had been created or joined by this userId.
 }

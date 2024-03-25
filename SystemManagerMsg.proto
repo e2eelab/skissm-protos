@@ -34,7 +34,7 @@ enum SystemOp {
 }
 
 message SystemManagerMsg {
-    int64 modified_date = 1;
-    SystemOp op = 2;
-    bytes payload = 3;
+    int64 modified_date = 1;        // The modified date of the system manager msg.
+    SystemOp op = 2;                // The operation of the system manager msg.
+    bytes payload = 3;              // The optional payload data.
 }

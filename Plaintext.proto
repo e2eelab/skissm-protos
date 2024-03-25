@@ -30,13 +30,13 @@ import "skissm/GroupPreKeyBundle.proto";
 import "skissm/GroupUpdateKeyBundle.proto";
 
 message Plaintext {
-    string version = 1;
+    string version = 1;                 // The version.
     oneof payload {
-        bytes common_msg = 2;
-        bytes common_sync_msg = 3;
+        bytes common_msg = 2;           // The common msg payload that is used for general purpose from application.
+        bytes common_sync_msg = 3;      // The sync msg payload that is forwarded to other devices of the user.
 
-        UserDevicesBundle user_devices_bundle = 11;
-        GroupPreKeyBundle group_pre_key_bundle = 12;
-        GroupUpdateKeyBundle group_update_key_bundle = 13;
+        UserDevicesBundle user_devices_bundle = 11;         // The user devices' bundle that is used to help sync session with other devices of the user.
+        GroupPreKeyBundle group_pre_key_bundle = 12;        // The group pre-key bundle that is used to help create group session.
+        GroupUpdateKeyBundle group_update_key_bundle = 13;  // The group update key bundle that is used to help renew group session.
     };
 }

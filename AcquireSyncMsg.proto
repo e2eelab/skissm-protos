@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/ProtoMsgTag.proto";
 
 message AcquireSyncMsg {
-    ProtoMsgTag last_proto_msg_tag = 1;
+    ProtoMsgTag last_proto_msg_tag = 1;      // The last handled tag for acquiring un-handled msg from server.
 }

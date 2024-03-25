@@ -30,14 +30,14 @@ import "skissm/GroupInfo.proto";
 import "skissm/GroupMemberInfo.proto";
 
 message GroupUpdateKeyBundle {
-    string version = 1;
-    uint32 e2ee_pack_id = 2;
-    E2eeAddress sender = 3;
-    bool adding = 4;
-    string session_id = 5;
-    GroupInfo group_info = 6;
-    uint32 sequence = 7;
-    bytes chain_key = 8;
-    bytes sign_public_key = 9;
-    repeated GroupMemberInfo adding_member_info_list = 10;
+    string version = 1;                 // The version.
+    uint32 e2ee_pack_id = 2;            // The e2ee pack ID.
+    E2eeAddress sender = 3;             // The sender's address.
+    bool adding = 4;                    // The flag for identifying this bundle is used for adding or not.
+    string session_id = 5;              // The session ID.
+    GroupInfo group_info = 6;           // Thi group information.
+    uint32 sequence = 7;                // The sequence of the chain key.
+    bytes chain_key = 8;                // The chain key.
+    bytes sign_public_key = 9;          // The signed public key part of the user's uploaded public identity key.
+    repeated GroupMemberInfo adding_member_info_list = 10;  // The list of adding group member information.
 }

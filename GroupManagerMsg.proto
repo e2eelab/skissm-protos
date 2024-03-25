@@ -80,19 +80,19 @@ message DestroyGroupArg {
 }
 
 message GroupManagerMsg {
-    int64 modified_date = 1;
-    string msgId = 2;
-    E2eeAddress group_address = 3;
-    string group_name = 4;
-    GroupOp op = 5;
+    int64 modified_date = 1;            // The modified date of the group manager msg.
+    string msgId = 2;                   // The msg ID.
+    E2eeAddress group_address = 3;      // The group address.
+    string group_name = 4;              // The group name.
+    GroupOp op = 5;                     // The operation of this msg.
     oneof arg {
-        CreateGroupArg create_group_arg = 11;
-        UpdateGroupNameArg update_group_name_arg = 12;
-        UpdateGroupAvatarArg update_group_avatar_arg = 13;
-        UpdateGroupAdminsArg update_group_admins_arg = 14;
-        AddGroupMembersArg add_group_members_arg = 21;
-        JoinGroupArg join_group_arg = 22;
-        RemoveGroupMembersArg remove_group_members_arg = 23;
-        DestroyGroupArg destroy_group_arg = 30;
+        CreateGroupArg create_group_arg = 11;                   // The argument for creating group.
+        UpdateGroupNameArg update_group_name_arg = 12;          // The argument for updating group name.
+        UpdateGroupAvatarArg update_group_avatar_arg = 13;      // The argument for updating group avatar.
+        UpdateGroupAdminsArg update_group_admins_arg = 14;      // The argument for updating group admins.
+        AddGroupMembersArg add_group_members_arg = 21;          // The argument for adding group members.
+        JoinGroupArg join_group_arg = 22;                       // The argument for joining group.
+        RemoveGroupMembersArg remove_group_members_arg = 23;    // The argument for removing group members.
+        DestroyGroupArg destroy_group_arg = 30;                 // The argument for destroying group.
     }
 }

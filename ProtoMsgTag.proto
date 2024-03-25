@@ -26,6 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message ProtoMsgTag {
-    int64 proto_msg_t = 1;
-    string proto_msg_id = 2;
+    int64 proto_msg_t = 1;              // The server time stamp.
+    string proto_msg_id = 2;            // The proto msg ID.
 }

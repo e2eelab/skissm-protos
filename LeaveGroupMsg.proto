@@ -10,6 +10,6 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 message LeaveGroupMsg {
-    E2eeAddress user_address = 1;       // The address of the user leaving the group
-    E2eeAddress group_address = 2;      // The group address
+    E2eeAddress user_address = 1;       // The address of the user leaving the group.
+    E2eeAddress group_address = 2;      // The group address.
 }

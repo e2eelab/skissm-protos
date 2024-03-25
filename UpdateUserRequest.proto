@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/UpdateUserMsg.proto";
 
 message UpdateUserRequest {
-    UpdateUserMsg msg = 1;
+    UpdateUserMsg msg = 1;      // The included msg for this request.
 }

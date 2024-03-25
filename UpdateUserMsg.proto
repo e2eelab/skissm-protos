@@ -55,9 +55,9 @@ message UpdateUserMsg {
     E2eeAddress user_address = 2;
     UpdateUserOp op = 3;
     oneof arg {
-        UpdateUserNameArg update_user_name_arg = 4;
-        UpdateUserAvatarArg update_user_avatar_arg = 5;
-        UpdateUserStateArg update_user_state_arg = 6;
-        UpdateUserPrivacyArg update_user_privacy_arg = 7;
+        UpdateUserNameArg update_user_name_arg = 4;         // The argument for updating user name.
+        UpdateUserAvatarArg update_user_avatar_arg = 5;     // The argument for updating user avatar.
+        UpdateUserStateArg update_user_state_arg = 6;       // The argument for updating user state.
+        UpdateUserPrivacyArg update_user_privacy_arg = 7;   // The argument for updating user privacy.
     }
 }

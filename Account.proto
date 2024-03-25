@@ -29,19 +29,21 @@ import "skissm/E2eeAddress.proto";
 import "skissm/IdentityKey.proto";
 import "skissm/SignedPreKey.proto";
 import "skissm/OneTimePreKey.proto";
+import "skissm/Server.proto";
 
 message Account {
-    string version = 1;                                 // The version we use
-    uint32 e2ee_pack_id = 2;                            // The e2ee pack ID we use
-    E2eeAddress address = 3;                            // The address of the account(this device)
+    string version = 1;                                 // The version used for this account.
+    uint32 e2ee_pack_id = 2;                            // The e2ee pack ID used for this account.
+    E2eeAddress address = 3;                            // The address with device ID for this account.
+    Server server = 4;                                  // The server information for this account.
 
-    IdentityKey identity_key = 11;                      // The identity key pair
-    SignedPreKey signed_pre_key = 12;                   // The signed pre-key pair
-    repeated OneTimePreKey one_time_pre_key_list = 13;  // The one-time pre-key pairs
-    uint32 next_one_time_pre_key_id = 14;               // Next one-time pre-key pair ID
+    IdentityKey identity_key = 11;                      // The identity key pair.
+    SignedPreKey signed_pre_key = 12;                   // The signed pre-key pair.
+    repeated OneTimePreKey one_time_pre_key_list = 13;  // The one-time pre-key pairs.
+    uint32 next_one_time_pre_key_id = 14;               // Next one-time pre-key pair ID.
 
-    bool saved = 21;                                    // The account is saved or not
-    string password = 22;
-    string auth = 23;
-    int64 expires_in = 24;
+    bool saved = 21;                                    // The account is saved or not.
+    string password = 22;                               // The password for logining to server.
+    string auth = 23;                                   // The jwt for authorizing request to server.
+    int64 expires_in = 24;                              // The expiration time of auth.
 }

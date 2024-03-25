@@ -30,14 +30,14 @@ import "skissm/SignedPreKeyPublic.proto";
 import "skissm/OneTimePreKeyPublic.proto";
 
 message RegisterUserRequest {
-    string user_name = 1;                                       // The user's name
-    string user_id = 2;                                         // The user's ID
-    string device_id = 3;                                       // The ID of the user's device
+    string user_name = 1;                                       // The user's name.
+    string user_id = 2;                                         // The user's ID.
+    string device_id = 3;                                       // The ID of the user's device.
     string authenticator = 4;                                   // Authenticator is the email (mailto:xxx@xxx) that is bound to the registering user.
-    string auth_code = 5;                                       // Auth code is a 6-digits number that is received by email or an invitation in this format (e2ee:invitorUserId@invitorDomain;invite=xxxxx)
+    string auth_code = 5;                                       // Auth code is a 6-digits number that is received by email or an invitation in this format (e2ee:invitorUserId@invitorDomain;invite=xxxxx).
 
-    uint32 e2ee_pack_id = 11;                                   // The e2ee pack ID
-    IdentityKeyPublic identity_key_public = 12;                 // The public part of the identity key pair
-    SignedPreKeyPublic signed_pre_key_public = 13;              // The public part of the signed pre-key pair
-    repeated OneTimePreKeyPublic one_time_pre_key_list = 14;    // The public part of all of the user's one-time pre-key pairs
+    uint32 e2ee_pack_id = 11;                                   // The e2ee pack ID.
+    IdentityKeyPublic identity_key_public = 12;                 // The public part of the identity key pair.
+    SignedPreKeyPublic signed_pre_key_public = 13;              // The public part of the signed pre-key pair.
+    repeated OneTimePreKeyPublic one_time_pre_key_list = 14;    // The public part of all of the user's one-time pre-key pairs.
 }

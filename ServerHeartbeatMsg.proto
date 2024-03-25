@@ -27,6 +27,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message ServerHeartbeatMsg {
-    string hostname = 1;
-    int64 server_t = 2;
+    string hostname = 1;    // The optional server host name.
+    int64 server_t = 2;     // The server time stamp.
 }

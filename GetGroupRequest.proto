@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 message GetGroupRequest {
-    E2eeAddress group_address = 1;
-    E2eeAddress sender_address = 2;
+    E2eeAddress group_address = 1;      // The group address.
+    E2eeAddress sender_address = 2;     // The sender address.
 }

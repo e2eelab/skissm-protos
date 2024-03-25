@@ -26,6 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message MsgKey {
-    uint32 index = 1;           // The index of the message key
-    bytes derived_key = 2;      // The data of the message key
+    uint32 index = 1;           // The index of the message key.
+    bytes derived_key = 2;      // The data of the message key.
 }

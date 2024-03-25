@@ -49,10 +49,10 @@ message FriendshipDTO {
 }
 
 message FriendManagerMsg {
-    int64 modified_date = 1;
-    string msgId = 2;
-    E2eeAddress user_address = 3;
-    string user_name = 4;
-    FriendOp op = 5;
-    FriendshipDTO friend = 6;
+    int64 modified_date = 1;            // The modified date of the friend manager msg.
+    string msgId = 2;                   // The msg ID.
+    E2eeAddress user_address = 3;       // The user address.
+    string user_name = 4;               // The user name.
+    FriendOp op = 5;                    // The operation of this msg.
+    FriendshipDTO friend = 6;           // The friend data.
 }

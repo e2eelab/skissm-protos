@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/AddGroupMembersMsg.proto";
 
 message AddGroupMembersRequest {
-    AddGroupMembersMsg msg = 1;             // Include the AddGroupMembersMsg proto
+    AddGroupMembersMsg msg = 1;             // The included msg for this request.
 }

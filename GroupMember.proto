@@ -34,7 +34,7 @@ enum GroupRole {
 }
 
 message GroupMember {
-    string user_id = 1;                     // The user's ID
-    string domain = 2;                      // The domain
-    GroupRole role = 3;                     // The user's role in the group
+    string user_id = 1;                     // The group member's users ID.
+    string domain = 2;                      // The group member's domain.
+    GroupRole role = 3;                     // The group member's role.
 }

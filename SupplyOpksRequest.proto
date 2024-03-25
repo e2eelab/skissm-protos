@@ -29,7 +29,7 @@ import "skissm/E2eeAddress.proto";
 import "skissm/OneTimePreKeyPublic.proto";
 
 message SupplyOpksRequest {
-    uint32 e2ee_pack_id = 1;                                        // The e2ee pack ID
-    E2eeAddress user_address = 2;                                   // The user's address
-    repeated OneTimePreKeyPublic one_time_pre_key_public_list = 3;  // The public part of one-time pre-key pairs
+    uint32 e2ee_pack_id = 1;                                        // The e2ee pack ID.
+    E2eeAddress user_address = 2;                                   // The user's address.
+    repeated OneTimePreKeyPublic one_time_pre_key_public_list = 3;  // The public part of one-time pre-key pairs.
 }

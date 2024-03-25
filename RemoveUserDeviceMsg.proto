@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
  
 message RemoveUserDeviceMsg {
-    E2eeAddress user_address = 1;                   // The removed user e2ee address
+    E2eeAddress user_address = 1;                   // The removed user e2ee address.
 }
  

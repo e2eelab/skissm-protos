@@ -26,6 +26,6 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message IdentityKeyPublic {
-    bytes asym_public_key = 1;
-    bytes sign_public_key = 2;
+    bytes asym_public_key = 1;      // The public key part for asymmetric encryption.
+    bytes sign_public_key = 2;      // The public key part for verifying signature.
 }

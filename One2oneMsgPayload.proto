@@ -26,9 +26,9 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message One2oneMsgPayload {
-    uint32 sequence = 1;                    // The sequence of the chain key
-    bytes ciphertext = 2;                   // The ciphertext
-    bytes ratchet_key = 3;                  // The ratchet public key
-    uint32 root_sequence = 4;               // The root sequence
-    uint32 sending_message_sequence = 5;    // The sequence of the sending message
+    uint32 sequence = 1;                    // The sequence of the chain key.
+    bytes ciphertext = 2;                   // The ciphertext.
+    bytes ratchet_key = 3;                  // The ratchet public key.
+    uint32 root_sequence = 4;               // The root sequence.
+    uint32 sending_message_sequence = 5;    // The sequence of the sending message.
 }

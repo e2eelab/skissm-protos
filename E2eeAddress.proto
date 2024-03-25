@@ -26,20 +26,20 @@ option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
 message PeerUser {
-    string user_name = 1;       // The user's name
-    string user_id = 2;         // The user's ID
-    string device_id = 3;       // The user's device ID
+    string user_name = 1;       // The optional user name.
+    string user_id = 2;         // The user's ID.
+    string device_id = 3;       // The user's device ID.
 }
 
 message PeerGroup {
-    string group_name = 1;      // The group name
-    string group_id = 2;        // The group ID
+    string group_name = 1;      // The optional group name.
+    string group_id = 2;        // The group ID.
 }
 
 message E2eeAddress {
-    string domain = 1;          // The domain
-    oneof peer {                // The address can be a user's or of a group
-        PeerUser user = 2;
-        PeerGroup group = 3;
+    string domain = 1;          // The domain of the address.
+    oneof peer {
+        PeerUser user = 2;      // The user peer of the address.
+        PeerGroup group = 3;    // The group peer of the address.
     }
 }

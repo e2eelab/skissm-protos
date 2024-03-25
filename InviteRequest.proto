@@ -28,5 +28,5 @@ option swift_prefix="Swift";
 import "skissm/InviteMsg.proto";
 
 message InviteRequest {
-    InviteMsg msg = 1;          // Include the InviteMsg proto
+    InviteMsg msg = 1;          // The included msg for this request.
 }

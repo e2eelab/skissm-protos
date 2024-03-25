@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 
 message GroupMemberInfo {
-    E2eeAddress member_address = 1;
-    bytes sign_public_key = 2;
+    E2eeAddress member_address = 1;     // The group member's address.
+    bytes sign_public_key = 2;          // The signed public key part of the user's uploaded public identity key.
 }

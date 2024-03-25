@@ -29,7 +29,7 @@ import "skissm/E2eeAddress.proto";
 import "skissm/GroupMember.proto";
 
 message GroupInfo {
-    string group_name = 1;                          // The group name
-    E2eeAddress group_address = 2;                  // The group address
-    repeated GroupMember group_member_list = 3;     // The group members
+    string group_name = 1;                          // The group name.
+    E2eeAddress group_address = 2;                  // The group address.
+    repeated GroupMember group_member_list = 3;     // The list of group members.
 }
