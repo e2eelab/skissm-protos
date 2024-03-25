@@ -21,7 +21,7 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "OneTimePreKeyProto";
+option java_outer_classname = "SkissmProto";
 
 import "skissm/KeyPair.proto";
 option objc_class_prefix = "Objc";
