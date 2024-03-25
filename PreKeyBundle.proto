@@ -36,4 +36,6 @@ message PreKeyBundle {
     IdentityKeyPublic identity_key_public = 3;              // The public part of the identity key pair
     SignedPreKeyPublic signed_pre_key_public = 4;           // The public part of the signed pre-key pair
     OneTimePreKeyPublic one_time_pre_key_public = 5;        // The public part of the one-time pre-key pair
+
+    bytes signature = 11;                                    // The signature of identity_key_public||signed_pre_key_public||one_time_pre_key_public signed by the server's key
 }

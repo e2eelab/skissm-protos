@@ -76,4 +76,6 @@ message ProtoMsg {
         ClientHeartbeatMsg client_heartbeat_msg = 101;
         ServerHeartbeatMsg server_heartbeat_msg = 102;
     };
+
+    bytes signature = 1001;                                    // The signature of tag||from||to||payload signed by the server's key
 }
