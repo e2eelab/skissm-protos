@@ -29,7 +29,6 @@ import "skissm/E2eeAddress.proto";
 import "skissm/IdentityKey.proto";
 import "skissm/SignedPreKey.proto";
 import "skissm/OneTimePreKey.proto";
-import "skissm/Server.proto";
 
 message Account {
     string version = 1;                                 // The version used for this account.

@@ -28,6 +28,6 @@ option swift_prefix="Swift";
 
 message ServerSignedSignature {
     string domain = 1;         // The domain of server that is responsible for the signature. 
-    int32 id = 1;              // The id of key that is used to create the signature.
+    int32 id = 2;              // The id of key that is used to create the signature.
     bytes signature = 3;       // The signature for some data.
 }
