@@ -19,15 +19,17 @@
 syntax = "proto3";
 
 package skissm;
- 
+
 option java_package = "org.e2eelab.proto.skissm";
 option java_outer_classname = "ServerProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
- 
+
+import "skissm/ChainablePublicKey.proto";
+
 message Server {
     string name = 1;            // The name of the registed server.
     string domain = 2;          // The domain of the registed server.
 
-    bytes public_key = 11;      // The public key for verifying msg from server.
+    repeated ChainablePublicKey public_key_list = 11; // The public key for verifying msg from server.
 }

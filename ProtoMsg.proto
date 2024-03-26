@@ -21,7 +21,7 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "SkissmProto";
+option java_outer_classname = "ProtoMsgProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
@@ -44,6 +44,7 @@ import "skissm/RemoveUserDeviceMsg.proto";
 import "skissm/UpdateUserMsg.proto";
 import "skissm/SupplyOpksMsg.proto";
 import "skissm/ServerHeartbeatMsg.proto";
+import "skissm/ServerSignedSignature.proto";
 import "skissm/SystemManagerMsg.proto";
 
 message ProtoMsg {
@@ -77,5 +78,5 @@ message ProtoMsg {
         ServerHeartbeatMsg server_heartbeat_msg = 102;              // The server heart beat msg.
     };
 
-    bytes signature = 1001;                                         // The signature of tag||from||to||payload signed by the server's key
+    ServerSignedSignature signature = 1001;     // The signature of tag||from||to||payload signed by the server's key
 }

@@ -21,7 +21,7 @@ syntax = "proto3";
 package skissm;
 
 option java_package = "org.e2eelab.proto.skissm";
-option java_outer_classname = "SkissmProto";
+option java_outer_classname = "AccountProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
@@ -35,7 +35,6 @@ message Account {
     string version = 1;                                 // The version used for this account.
     uint32 e2ee_pack_id = 2;                            // The e2ee pack ID used for this account.
     E2eeAddress address = 3;                            // The address with device ID for this account.
-    Server server = 4;                                  // The server information for this account.
 
     IdentityKey identity_key = 11;                      // The identity key pair.
     SignedPreKey signed_pre_key = 12;                   // The signed pre-key pair.
