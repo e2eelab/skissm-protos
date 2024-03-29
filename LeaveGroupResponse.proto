@@ -10,6 +10,9 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 import "skissm/ResponseCode.proto";
 
+/**
+ * Response for leaving a group.
+ */
 message LeaveGroupResponse {
     ResponseCode code = 1;                              // The response code given by the server.
     string msg = 2;                                     // The message given by the server.

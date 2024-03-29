@@ -9,6 +9,9 @@ option swift_prefix="Swift";
 
 import "skissm/LeaveGroupMsg.proto";
 
+/**
+ * Request for leaving a group.
+ */
 message LeaveGroupRequest {
     LeaveGroupMsg msg = 1;          // The included msg for this request.
 }

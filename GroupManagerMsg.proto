@@ -1,21 +1,3 @@
-/*
- * Copyright © 2020-2021 by Academia Sinica
- *
- * This file is part of SKISSM.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * SKISSM is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with SKISSM.  If not, see <http://www.gnu.org/licenses/>.
- */
 syntax = "proto3";
 
 package skissm;
@@ -28,6 +10,9 @@ option swift_prefix="Swift";
 import "skissm/E2eeAddress.proto";
 import "skissm/GroupMember.proto";
 
+/**
+ * The group operations.
+ */
 enum GroupOp {
     GROUP_OP_UNKNOWN = 0;
     GROUP_OP_CREATE_GROUP = 11;
@@ -40,45 +25,72 @@ enum GroupOp {
     GROUP_OP_DESTROY_GROUP = 30;
 }
 
+/**
+ * Argument for creating a group.
+ */
 message CreateGroupArg {
     E2eeAddress creator_address = 1;
     repeated GroupMember group_member_list = 2;
 }
 
+/**
+ * Argument for updating the group name.
+ */
 message UpdateGroupNameArg {
     E2eeAddress user_address = 1;
     string group_name = 2;
 }
 
+/**
+ * Argument for updating the group avatar.
+ */
 message UpdateGroupAvatarArg {
     E2eeAddress user_address = 1;
     string groupAvatarUrl = 2;
 }
 
+/**
+ * Argument for updating the group admins.
+ */
 message UpdateGroupAdminsArg {
     E2eeAddress user_address = 1;
     repeated GroupMember group_admin_list = 2;
 }
 
+/**
+ * Argument for adding group members.
+ */
 message AddGroupMembersArg {
     E2eeAddress user_address = 1;
     repeated GroupMember added_member_list = 2;
 }
 
+/**
+ * Argument for joining a group.
+ */
 message JoinGroupArg {
     E2eeAddress user_address = 1;
     GroupMember joined_member = 2;
 }
 
+/**
+ * Argument for removing group members.
+ */
 message RemoveGroupMembersArg {
     E2eeAddress user_address = 1;
     repeated GroupMember removed_member_list = 2;
 }
 
+/**
+ * Argument for destroying a group.
+ */
 message DestroyGroupArg {
     E2eeAddress user_address = 1;
 }
 
+/**
+ * Msg for group manager.
+ */
 message GroupManagerMsg {
     int64 modified_date = 1;            // The modified date of the group manager msg.
     string msgId = 2;                   // The msg ID.

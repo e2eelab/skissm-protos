@@ -1,21 +1,3 @@
-/*
- * Copyright © 2020-2021 by Academia Sinica
- *
- * This file is part of SKISSM.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * SKISSM is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with SKISSM.  If not, see <http://www.gnu.org/licenses/>.
- */
 syntax = "proto3";
 
 package skissm;
@@ -27,6 +9,9 @@ option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 
+/**
+ * The friend operations.
+ */
 enum FriendOp {
     FRIEND_OP_ADDING_SEND = 0;
     FRIEND_OP_ADDING_RECEIVE = 1;
@@ -38,6 +23,9 @@ enum FriendOp {
     FRIEND_OP_RECOMMEND = 7;
 }
 
+/**
+ * The data object representing a friend.
+ */
 message FriendshipDTO {
     int64 modified_date = 1;
     string from_user = 2;
@@ -48,6 +36,9 @@ message FriendshipDTO {
     int32 friend_status = 7;
 }
 
+/**
+ * Msg for friend manager.
+ */
 message FriendManagerMsg {
     int64 modified_date = 1;            // The modified date of the friend manager msg.
     string msgId = 2;                   // The msg ID.

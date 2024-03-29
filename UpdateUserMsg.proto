@@ -1,21 +1,3 @@
-/*
- * Copyright © 2020-2021 by Academia Sinica
- *
- * This file is part of SKISSM.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * SKISSM is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with SKISSM.  If not, see <http://www.gnu.org/licenses/>.
- */
 syntax = "proto3";
 
 package skissm;
@@ -27,6 +9,9 @@ option swift_prefix="Swift";
 
 import "skissm/E2eeAddress.proto";
 
+/**
+ * The update user operations.
+ */
 enum UpdateUserOp {
     UPDATE_USER_OP_NAME = 0;
     UPDATE_USER_OP_AVATAR = 1;
@@ -34,22 +19,37 @@ enum UpdateUserOp {
     UPDATE_USER_OP_PRIVACY = 3;
 }
 
+/**
+ * Argument for updating the user name.
+ */
 message UpdateUserNameArg {
     string username = 1;
 }
 
+/**
+ * Argument for updating the user avatar.
+ */
 message UpdateUserAvatarArg {
     string user_avatar_url = 1;
 }
 
+/**
+ * Argument for updating the user state.
+ */
 message UpdateUserStateArg {
     int32 user_state = 1;
 }
 
+/**
+ * Argument for updating the user privacy.
+ */
 message UpdateUserPrivacyArg {
     string user_privacy_json = 1;
 }
 
+/**
+ * Msg for updating user.
+ */
 message UpdateUserMsg {
     int64 modified_date = 1;
     E2eeAddress user_address = 2;
