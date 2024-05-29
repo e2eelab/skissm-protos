@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "CertProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+import "skissm/DsAlgType.proto";
+import "skissm/HashAlgType.proto";
+
+/**
+ * A subject is used to describe issuer or issuee.
+ */
+message Subject {
+    string cn = 1;              // The common name.
+    string domain = 2;          // The domain name.
+    string o = 3;               // The organization name
+    repeated string ou = 4;     // The organization unit name.
+}
+
+/**
+ * A cert data with public key is provided by an issuee and can be signed by an issuer.
+ */
+message Cert {
+    Subject issuee = 11;              // The owner of this certificate.
+    DsAlgType public_key_alg = 12;    // The public key algorithm.
+    bytes public_key = 13;            // The public key data.
+
+    Subject issuer = 2;               // The signer of this certificate.
+    int64 not_before = 4;             // The time stamp that is signer of this certificate.
+    int64 not_after = 5;
+}
+
+message Certificate {
+    uint32 version = 1;                         // The version number
+
+    Cert cert = 11;                             // The cert data that is provided by issuee.
+
+    HashAlgType cert_hash_alg = 21;             // The hash algotithm for creating fingerprint of cert attribute.
+    bytes cert_fingerprint = 22;                // The hash value as the fingerprint for cert attribute.
+
+    HashAlgType signing_public_key_hash_alg = 31; // The hash algotithm for creating fingerprint for the signing public key.
+    bytes signing_public_key_fingerprint = 32;    // The hash value as the fingerprint for the signing public key.
+    DsAlgType signing_alg = 33;                   // The algorithm for generating the signature.
+    bytes signature = 34;                         // The signature that is signed by signing private key that is owned by issuer.
+
+    int64 ts = 41;                                // The lastest updat time stamp for this certificate.
+    bool valid = 42;                              // The validity of this certificate.
+}

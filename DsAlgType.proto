@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "DsAlgTypeProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+enum DsAlgType {
+    DS_KEY_TYPE_DILITHIUM_2 = 0;
+    DS_KEY_TYPE_DILITHIUM_3 = 1;
+    DS_KEY_TYPE_DILITHIUM_5 = 2;
+
+    DS_KEY_TYPE_FALCON_512 = 100;
+    DS_KEY_TYPE_FALCON_1024 = 101;
+
+    DS_KEY_TYPE_SPHINCS_SHA2_128F = 200;
+    DS_KEY_TYPE_SPHINCS_SHA2_128s = 201;
+    DS_KEY_TYPE_SPHINCS_SHA2_192f = 202;
+    DS_KEY_TYPE_SPHINCS_SHA2_192s = 203;
+    DS_KEY_TYPE_SPHINCS_SHA2_256f = 204;
+    DS_KEY_TYPE_SPHINCS_SHA2_256s = 205;
+    DS_KEY_TYPE_SPHINCS_SHAKE_128f = 206;
+    DS_KEY_TYPE_SPHINCS_128s = 207;
+    DS_KEY_TYPE_SPHINCS_192f = 208;
+    DS_KEY_TYPE_SPHINCS_192s = 209;
+    DS_KEY_TYPE_SPHINCS_256f = 210;
+    DS_KEY_TYPE_SPHINCS_256s = 211;
+}

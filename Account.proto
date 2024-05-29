@@ -7,10 +7,11 @@ option java_outer_classname = "AccountProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+import "skissm/Cert.proto";
 import "skissm/E2eeAddress.proto";
 import "skissm/IdentityKey.proto";
-import "skissm/SignedPreKey.proto";
 import "skissm/OneTimePreKey.proto";
+import "skissm/SignedPreKey.proto";
 
 /**
  * Account for keeping keys and registeration information.
@@ -19,6 +20,7 @@ message Account {
     string version = 1;                                 // The version used for this account.
     uint32 e2ee_pack_id = 2;                            // The e2ee pack ID used for this account.
     E2eeAddress address = 3;                            // The address with device ID for this account.
+    Certificate server_cert = 4;                        // The certificate of the server that create this account.
 
     IdentityKey identity_key = 11;                      // The identity key pair.
     SignedPreKey signed_pre_key = 12;                   // The signed pre-key pair.
