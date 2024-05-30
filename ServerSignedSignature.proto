@@ -8,11 +8,21 @@ option java_outer_classname = "ServerSignedSignatureProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+import "skissm/Certificate.proto";
+import "skissm/DsAlgType.proto";
+import "skissm/HashAlgType.proto";
+
 /**
  * The server signed signature.
  */
 message ServerSignedSignature {
-    string domain = 1;         // The domain of server that is responsible for the signature. 
-    int32 id = 2;              // The id of key that is used to create the signature.
-    bytes signature = 3;       // The signature for some data.
+    uint32 version = 1;                 // The version number
+    HashAlgType hash_alg = 2;           // The hash algorithm for creating fingerprint of cert attribute and signing public key.
+    DsAlgType signing_alg = 3;          // The algorithm for generating the signature.
+
+    Subject signer = 11;                         // The signer information.
+    bytes signing_public_key_fingerprint = 12;   // The hash value as the fingerprint of the signing public key.
+
+    bytes msg_fingerprint = 21;         // The hash value as the fingerprint of message to be signed.
+    bytes signature = 22;               // The signature of some message signed by the signer's key.
 }
