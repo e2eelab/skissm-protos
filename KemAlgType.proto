@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "KemAlgTypeProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+/**
+ * Kem algorithm type.
+ */
+enum KemAlgType {
+    KEM_ALG_TYPE_CURVE25519 = 0;
+
+    KEM_ALG_TYPE_HQC128 = 1;
+    KEM_ALG_TYPE_HQC192 = 9;
+    KEM_ALG_TYPE_HQC256 = 17;
+
+    KEM_ALG_TYPE_KYBER512 = 33;
+    KEM_ALG_TYPE_KYBER768 = 41;
+    KEM_ALG_TYPE_KYBER1024 = 49;
+
+    KEM_ALG_TYPE_MCELIECE348864 = 65;
+    KEM_ALG_TYPE_MCELIECE348864F = 69;
+    KEM_ALG_TYPE_MCELIECE460896 = 73;
+    KEM_ALG_TYPE_MCELIECE460896F = 77;
+    KEM_ALG_TYPE_MCELIECE6688128 = 81;
+    KEM_ALG_TYPE_MCELIECE6688128F = 85;
+    KEM_ALG_TYPE_MCELIECE6960119 = 89;
+    KEM_ALG_TYPE_MCELIECE6960119F = 93;
+    KEM_ALG_TYPE_MCELIECE8192128 = 97;
+    KEM_ALG_TYPE_MCELIECE8192128F = 101;
+}

@@ -7,15 +7,18 @@ option java_outer_classname = "HashAlgTypeProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+/**
+ * Hash algorithm type.
+ */
 enum HashAlgType {
     HASH_ALG_TYPE_SHA2_224 = 0;
     HASH_ALG_TYPE_SHA2_256 = 1;
     HASH_ALG_TYPE_SHA2_384 = 2;
     HASH_ALG_TYPE_SHA2_512 = 3;
-    HASH_ALG_TYPE_SHA3_224 = 10;
-    HASH_ALG_TYPE_SHA3_256 = 11;
-    HASH_ALG_TYPE_SHA3_384 = 12;
-    HASH_ALG_TYPE_SHA3_512 = 13;
-    HASH_ALG_TYPE_SHAKE_128 = 20;
-    HASH_ALG_TYPE_SHAKE_256 = 21;
+    HASH_ALG_TYPE_SHA3_224 = 8;
+    HASH_ALG_TYPE_SHA3_256 = 9;
+    HASH_ALG_TYPE_SHA3_384 = 10;
+    HASH_ALG_TYPE_SHA3_512 = 11;
+    HASH_ALG_TYPE_SHAKE_128 = 12;
+    HASH_ALG_TYPE_SHAKE_256 = 13;
 }

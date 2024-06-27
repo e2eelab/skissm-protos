@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "SymKeyAlgTypeProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+/**
+ * Symmetric key algorithm type.
+ */
+enum SymKeyAlgType {
+    SYM_KEY_ALG_TYPE_AES256GCM = 0;
+}

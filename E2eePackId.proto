@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package skissm;
+
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "E2eePackIdProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+
+import "skissm/DsAlgType.proto";
+import "skissm/HashAlgType.proto";
+import "skissm/KemAlgType.proto";
+import "skissm/SymKeyAlgType.proto";
+
+/**
+ * Msg for e2ee pack ID.
+ */
+message E2eePackId {
+    int32 ver = 1;                              // The version.
+    DsAlgType ds = 2;                           // The digital signature algorithm type.
+    KemAlgType kem = 3;                         // The kem algorithm type.
+    SymKeyAlgType sym_key = 4;                  // The symmetric-key algorithm type.
+    HashAlgType hash = 5;                       // The hash algorithm type.
+}
