@@ -7,9 +7,21 @@ option java_outer_classname = "ConsumeProtoMsgRequestProto";
 option objc_class_prefix = "Objc";
 option swift_prefix="Swift";
 
+
+/**
+ * The operational state of proto msg.
+ */
+enum ProtoMsgOpState {
+    PROTO_MSG_OP_STATE_SUCCEEDEDED = 0;
+    PROTO_MSG_OP_STATE_FAILED_SIGNATURE_VERIFICATION = 1;
+    PROTO_MSG_OP_STATE_FAILED_DECRYPTION = 11;
+    PROTO_MSG_OP_STATE_FAILED_SKIP = 101;
+}
+
 /**
  * Request for consuming a proto msg received from server.
  */
 message ConsumeProtoMsgRequest {
     string proto_msg_id = 1;        // The proto msg ID to be consumed.
+    ProtoMsgOpState state = 11;     // The operational state of the consumed proto msg.
 }
