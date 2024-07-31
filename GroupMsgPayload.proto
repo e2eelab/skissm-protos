@@ -11,7 +11,7 @@ option swift_prefix="Swift";
  * Payload for group msg.
  */
 message GroupMsgPayload {
-    uint32 sequence = 1;        // The sequence of the related group session.
-    bytes ciphertext = 2;       // The ciphertext.
-    bytes signature = 3;        // The signature signed by the sender.
+  uint32 sequence = 1;        // The sequence of the related group session.
+  bytes ciphertext = 2;       // The ciphertext.
+  bytes signature = 3;        // The signature signed by the sender.
 }

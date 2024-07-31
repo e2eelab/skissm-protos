@@ -13,5 +13,5 @@ import "skissm/E2eeMsg.proto";
  * Request for sending an one2one msg.
  */
 message SendOne2oneMsgRequest {
-    E2eeMsg msg = 1;            // The included msg for this request.
+  E2eeMsg msg = 1;            // The included msg for this request.
 }

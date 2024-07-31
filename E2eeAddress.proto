@@ -11,26 +11,26 @@ option swift_prefix="Swift";
  * User peer.
  */
 message PeerUser {
-    string user_name = 1;       // The optional user name.
-    string user_id = 2;         // The user's ID.
-    string device_id = 3;       // The user's device ID.
+  string user_name = 1;       // The optional user name.
+  string user_id = 2;         // The user's ID.
+  string device_id = 3;       // The user's device ID.
 }
 
 /**
  * Group peer.
  */
 message PeerGroup {
-    string group_name = 1;      // The optional group name.
-    string group_id = 2;        // The group ID.
+  string group_name = 1;      // The optional group name.
+  string group_id = 2;        // The group ID.
 }
 
 /**
  * The address for designating an end point of user or group.
  */
 message E2eeAddress {
-    string domain = 1;          // The domain of the address.
-    oneof peer {
-        PeerUser user = 2;      // The user peer of the address.
-        PeerGroup group = 3;    // The group peer of the address.
-    }
+  string domain = 1;          // The domain of the address.
+  oneof peer {
+      PeerUser user = 2;      // The user peer of the address.
+      PeerGroup group = 3;    // The group peer of the address.
+  }
 }

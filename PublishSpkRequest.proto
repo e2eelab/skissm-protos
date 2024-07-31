@@ -14,6 +14,6 @@ import "skissm/SignedPreKeyPublic.proto";
  * Request for publishing signed pre-key.
  */
 message PublishSpkRequest {
-    E2eeAddress user_address = 1;                       // The user's address.
-    SignedPreKeyPublic signed_pre_key_public = 2;       // The public part of the signed pre-key pair.
+  E2eeAddress user_address = 1;                       // The user's address.
+  SignedPreKeyPublic signed_pre_key_public = 2;       // The public part of the signed pre-key pair.
 }

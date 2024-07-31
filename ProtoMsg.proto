@@ -33,35 +33,35 @@ import "skissm/SystemManagerMsg.proto";
  * The proto msg from server.
  */
 message ProtoMsg {
-    ProtoMsgTag tag = 1;                // The tag for helping server consume this msg.
-    E2eeAddress from = 2;               // The sender's address.
-    E2eeAddress to = 3;                 // The receiver's address.
-    oneof payload {
-        AcquireSyncMsg acquire_sync_msg = 11;               // The acquire sync msg.
+  ProtoMsgTag tag = 1;                // The tag for helping server consume this msg.
+  E2eeAddress from = 2;               // The sender's address.
+  E2eeAddress to = 3;                 // The receiver's address.
+  oneof payload {
+      AcquireSyncMsg acquire_sync_msg = 11;               // The acquire sync msg.
 
-        SupplyOpksMsg supply_opks_msg = 21;                 // The supply one-time pre-key msg.
-        InviteMsg invite_msg = 22;                          // The invite msg.
-        AcceptMsg accept_msg = 23;                          // The accept msg.
-        AddUserDeviceMsg add_user_device_msg = 24;          // The add user device msg.
-        RemoveUserDeviceMsg remove_user_device_msg = 25;    // The remove user device msg.
+      SupplyOpksMsg supply_opks_msg = 21;                 // The supply one-time pre-key msg.
+      InviteMsg invite_msg = 22;                          // The invite msg.
+      AcceptMsg accept_msg = 23;                          // The accept msg.
+      AddUserDeviceMsg add_user_device_msg = 24;          // The add user device msg.
+      RemoveUserDeviceMsg remove_user_device_msg = 25;    // The remove user device msg.
 
-        CreateGroupMsg create_group_msg = 41;                       // The create group msg..
-        AddGroupMembersMsg add_group_members_msg = 42;              // The add group members msg.
-        RemoveGroupMembersMsg remove_group_members_msg = 43;        // The remove group members msg.
-        AddGroupMemberDeviceMsg add_group_member_device_msg = 44;   // The add group member device msg.
-        LeaveGroupMsg leave_group_msg = 45;                         // The leave group msg.
+      CreateGroupMsg create_group_msg = 41;                       // The create group msg..
+      AddGroupMembersMsg add_group_members_msg = 42;              // The add group members msg.
+      RemoveGroupMembersMsg remove_group_members_msg = 43;        // The remove group members msg.
+      AddGroupMemberDeviceMsg add_group_member_device_msg = 44;   // The add group member device msg.
+      LeaveGroupMsg leave_group_msg = 45;                         // The leave group msg.
 
-        E2eeMsg e2ee_msg = 51;                                      // The end to end encryption msg.
+      E2eeMsg e2ee_msg = 51;                                      // The end to end encryption msg.
 
-        UpdateUserMsg update_user_msg = 61;                         // The update user msg.
+      UpdateUserMsg update_user_msg = 61;                         // The update user msg.
 
-        FriendManagerMsg friend_manager_msg = 91;                   // The friend manager msg.
-        GroupManagerMsg group_manager_msg = 92;                     // The group manager msg.
-        SystemManagerMsg system_manager_msg = 93;                   // The system manager msg.
+      FriendManagerMsg friend_manager_msg = 91;                   // The friend manager msg.
+      GroupManagerMsg group_manager_msg = 92;                     // The group manager msg.
+      SystemManagerMsg system_manager_msg = 93;                   // The system manager msg.
 
-        ClientHeartbeatMsg client_heartbeat_msg = 101;              // The client heart beat msg.
-        ServerHeartbeatMsg server_heartbeat_msg = 102;              // The server heart beat msg.
-    };
+      ClientHeartbeatMsg client_heartbeat_msg = 101;              // The client heart beat msg.
+      ServerHeartbeatMsg server_heartbeat_msg = 102;              // The server heart beat msg.
+  };
 
-    repeated ServerSignedSignature signature_list = 1001;           // The list of signatures created by signing the fingerprint of tag||from||to||payload with each server's key.
+  repeated ServerSignedSignature signature_list = 1001;           // The list of signatures created by signing the fingerprint of tag||from||to||payload with each server's key.
 }

@@ -12,5 +12,5 @@ option swift_prefix="Swift";
  * Msg for client heartbeat.
  */
 message ClientHeartbeatMsg {
-    int64 client_t = 1;         // The timestamp of client.
+  int64 client_t = 1;         // The timestamp of client.
 }

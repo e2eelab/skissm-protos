@@ -13,6 +13,6 @@ import "skissm/MsgKey.proto";
  * The skipped msg key node.
  */
 message SkippedMsgKeyNode {
-    bytes ratchet_key_public = 1;       // The public part of the ratchet key.
-    MsgKey msg_key = 2;                 // The msg key.
+  bytes ratchet_key_public = 1;       // The public part of the ratchet key.
+  MsgKey msg_key = 2;                 // The msg key.
 }

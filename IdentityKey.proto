@@ -13,6 +13,6 @@ import "skissm/KeyPair.proto";
  * The identity key.
  */
 message IdentityKey {
-    KeyPair asym_key_pair = 1;      // The key pair for asymmetric encryption and decryption.
-    KeyPair sign_key_pair = 2;      // The key pair for signing and verifying signature.
+  KeyPair asym_key_pair = 1;      // The key pair for asymmetric encryption and decryption.
+  KeyPair sign_key_pair = 2;      // The key pair for signing and verifying signature.
 }

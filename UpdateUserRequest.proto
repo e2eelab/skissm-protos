@@ -13,5 +13,5 @@ import "skissm/UpdateUserMsg.proto";
  * Request for updating user.
  */
 message UpdateUserRequest {
-    UpdateUserMsg msg = 1;      // The included msg for this request.
+  UpdateUserMsg msg = 1;      // The included msg for this request.
 }

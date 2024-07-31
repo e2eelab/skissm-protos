@@ -11,18 +11,18 @@ option swift_prefix="Swift";
  * The group role.
  */
 enum GroupRole {
-    GROUP_ROLE_MEMBER = 0;
-    GROUP_ROLE_MANAGER = 1;
+  GROUP_ROLE_MEMBER = 0;
+  GROUP_ROLE_MANAGER = 1;
 
-    GROUP_ROLE_PENDING_MEMBER = 10;
-    GROUP_ROLE_PENDING_MANAGER = 11;
+  GROUP_ROLE_PENDING_MEMBER = 10;
+  GROUP_ROLE_PENDING_MANAGER = 11;
 }
 
 /**
  * The group member.
  */
 message GroupMember {
-    string user_id = 1;                     // The group member's users ID.
-    string domain = 2;                      // The group member's domain.
-    GroupRole role = 3;                     // The group member's role.
+  string user_id = 1;                     // The group member's users ID.
+  string domain = 2;                      // The group member's domain.
+  GroupRole role = 3;                     // The group member's role.
 }

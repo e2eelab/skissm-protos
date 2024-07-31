@@ -13,37 +13,37 @@ import "skissm/E2eeAddress.proto";
  * The friend operations.
  */
 enum FriendOp {
-    FRIEND_OP_ADDING_SEND = 0;
-    FRIEND_OP_ADDING_RECEIVE = 1;
-    FRIEND_OP_ADDED = 2;
-    FRIEND_OP_BLOCKED = 3;
-    FRIEND_OP_UNBLOCKED = 4;
-    FRIEND_OP_REMOVED = 5;
-    FRIEND_OP_UPDATE_MEMONAME = 6;
-    FRIEND_OP_RECOMMEND = 7;
+  FRIEND_OP_ADDING_SEND = 0;
+  FRIEND_OP_ADDING_RECEIVE = 1;
+  FRIEND_OP_ADDED = 2;
+  FRIEND_OP_BLOCKED = 3;
+  FRIEND_OP_UNBLOCKED = 4;
+  FRIEND_OP_REMOVED = 5;
+  FRIEND_OP_UPDATE_MEMONAME = 6;
+  FRIEND_OP_RECOMMEND = 7;
 }
 
 /**
  * The data object representing a friend.
  */
 message FriendshipDTO {
-    int64 modified_date = 1;
-    string from_user = 2;
-    string to_user = 3;
-    string nickname = 4;
-    string memoname = 5;
-    int32 block_state = 6;
-    int32 friend_status = 7;
+  int64 modified_date = 1;
+  string from_user = 2;
+  string to_user = 3;
+  string nickname = 4;
+  string memoname = 5;
+  int32 block_state = 6;
+  int32 friend_status = 7;
 }
 
 /**
  * Msg for friend manager.
  */
 message FriendManagerMsg {
-    int64 modified_date = 1;            // The modified date of the friend manager msg.
-    string msgId = 2;                   // The msg ID.
-    E2eeAddress user_address = 3;       // The user address.
-    string user_name = 4;               // The user name.
-    FriendOp op = 5;                    // The operation of this msg.
-    FriendshipDTO friend = 6;           // The friend data.
+  int64 modified_date = 1;            // The modified date of the friend manager msg.
+  string msgId = 2;                   // The msg ID.
+  E2eeAddress user_address = 3;       // The user address.
+  string user_name = 4;               // The user name.
+  FriendOp op = 5;                    // The operation of this msg.
+  FriendshipDTO friend = 6;           // The friend data.
 }

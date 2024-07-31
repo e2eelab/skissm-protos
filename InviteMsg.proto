@@ -13,15 +13,15 @@ import "skissm/E2eeAddress.proto";
  * Msg form inviter for initiating a key agreement.
  */
 message InviteMsg {
-    string version = 1;                         // The version.
-    uint32 e2ee_pack_id = 2;                    // The e2ee pack ID.
-    string session_id = 3;                      // The session ID.
-    E2eeAddress from = 4;                       // The sender's address.
-    E2eeAddress to = 5;                         // The receiver's address.
-    bytes alice_identity_key = 6;               // The inviter's identity key.
-    bytes alice_base_key = 7;                   // The inviter's base key that is the first ratchet public key.
-    repeated bytes pre_shared_input_list = 8;   // The data that needs to generate some shared secret.
-    uint32 bob_signed_pre_key_id = 9;           // The invitee's signed pre-key ID.
-    uint32 bob_one_time_pre_key_id = 10;        // The invitee's one-time pre-key ID.
-    int64 invite_t = 11;                        // The server time of invitation for creating this session.
+  string version = 1;                         // The version.
+  uint32 e2ee_pack_id = 2;                    // The e2ee pack ID.
+  string session_id = 3;                      // The session ID.
+  E2eeAddress from = 4;                       // The sender's address.
+  E2eeAddress to = 5;                         // The receiver's address.
+  bytes alice_identity_key = 6;               // The inviter's identity key.
+  bytes alice_base_key = 7;                   // The inviter's base key that is the first ratchet public key.
+  repeated bytes pre_shared_input_list = 8;   // The data that needs to generate some shared secret.
+  uint32 bob_signed_pre_key_id = 9;           // The invitee's signed pre-key ID.
+  uint32 bob_one_time_pre_key_id = 10;        // The invitee's one-time pre-key ID.
+  int64 invite_t = 11;                        // The server time of invitation for creating this session.
 }

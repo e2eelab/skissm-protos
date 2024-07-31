@@ -13,5 +13,5 @@ import "skissm/AddGroupMembersMsg.proto";
  * Request for adding group members.
  */
 message AddGroupMembersRequest {
-    AddGroupMembersMsg msg = 1;             // The included msg for this request.
+  AddGroupMembersMsg msg = 1;             // The included msg for this request.
 }

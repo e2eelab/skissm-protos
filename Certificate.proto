@@ -14,40 +14,40 @@ import "skissm/HashAlgType.proto";
  * A subject is used to describe issuer or issuee.
  */
 message Subject {
-    string cn = 1;              // The common name.
-    string domain = 2;          // The domain name.
-    string o = 3;               // The organization name
-    repeated string ou = 4;     // The organization unit name.
+  string cn = 1;              // The common name.
+  string domain = 2;          // The domain name.
+  string o = 3;               // The organization name
+  repeated string ou = 4;     // The organization unit name.
 }
 
 /**
  * A cert data with public key is provided by an issuee and can be signed by an issuer.
  */
 message Cert {
-    Subject issuee = 11;              // The owner of this certificate.
-    DsAlgType public_key_alg = 12;    // The public key algorithm.
-    bytes public_key = 13;            // The public key data.
+  Subject issuee = 11;              // The owner of this certificate.
+  DsAlgType public_key_alg = 12;    // The public key algorithm.
+  bytes public_key = 13;            // The public key data.
 
-    Subject issuer = 2;               // The signer of this certificate.
-    int64 not_before = 4;             // The certificate issue date.
-    int64 not_after = 5;              // The certificate expiry date.
+  Subject issuer = 2;               // The signer of this certificate.
+  int64 not_before = 4;             // The certificate issue date.
+  int64 not_after = 5;              // The certificate expiry date.
 }
 
 /**
  * The certificate message.
  */
 message Certificate {
-    uint32 version = 1;                             // The version number
-    HashAlgType hash_alg = 2;                       // The hash algorithm for creating fingerprint of cert attribute and signing public key.
-    DsAlgType signing_alg = 3;                      // The algorithm for generating the signature.
+  uint32 version = 1;                             // The version number
+  HashAlgType hash_alg = 2;                       // The hash algorithm for creating fingerprint of cert attribute and signing public key.
+  DsAlgType signing_alg = 3;                      // The algorithm for generating the signature.
 
-    Cert cert = 11;                                 // The cert data that is provided by issuee.
+  Cert cert = 11;                                 // The cert data that is provided by issuee.
 
-    bytes cert_fingerprint = 21;                    // The hash value as the fingerprint of cert attribute.
-    bytes signing_public_key_fingerprint = 22;      // The hash value as the fingerprint of the signing public key.
+  bytes cert_fingerprint = 21;                    // The hash value as the fingerprint of cert attribute.
+  bytes signing_public_key_fingerprint = 22;      // The hash value as the fingerprint of the signing public key.
 
-    bytes signature = 31;                           // The signature that is signed by signing private key that is owned by issuer.
+  bytes signature = 31;                           // The signature that is signed by signing private key that is owned by issuer.
 
-    int64 ts = 41;                                  // The lastest update time stamp for this certificate.
-    bool valid = 42;                                // The validity of this certificate.
+  int64 ts = 41;                                  // The lastest update time stamp for this certificate.
+  bool valid = 42;                                // The validity of this certificate.
 }

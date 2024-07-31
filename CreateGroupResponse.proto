@@ -15,9 +15,9 @@ import "skissm/ResponseCode.proto";
  * Response for creating a group.
  */
 message CreateGroupResponse {
-    ResponseCode code = 1;                              // The response code given by the server.
-    string msg = 2;                                     // The message given by the server.
+  ResponseCode code = 1;                              // The response code given by the server.
+  string msg = 2;                                     // The message given by the server.
 
-    E2eeAddress group_address = 3;                      // The group address.
-    repeated GroupMemberInfo member_info_list = 4;      // The group members' information.
+  E2eeAddress group_address = 3;                      // The group address.
+  repeated GroupMemberInfo member_info_list = 4;      // The group members' information.
 }

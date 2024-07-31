@@ -16,14 +16,14 @@ import "skissm/GroupMsgPayload.proto";
  * Msg for end to end encryption.
  */
 message E2eeMsg {
-    string version = 1;                             // The version.
-    E2eeAddress from = 2;                           // The sender's address.
-    E2eeAddress to = 3;                             // The receiver's address.
-    string msg_id = 4;
-    string session_id = 5;                          // The session ID.
-    NotifLevel notif_level = 6;
-    oneof payload {
-        One2oneMsgPayload one2one_msg = 11;         // The payload for one2one msg.
-        GroupMsgPayload group_msg = 12;             // The payload for group msg.
-    };
+  string version = 1;                             // The version.
+  E2eeAddress from = 2;                           // The sender's address.
+  E2eeAddress to = 3;                             // The receiver's address.
+  string msg_id = 4;
+  string session_id = 5;                          // The session ID.
+  NotifLevel notif_level = 6;
+  oneof payload {
+      One2oneMsgPayload one2one_msg = 11;         // The payload for one2one msg.
+      GroupMsgPayload group_msg = 12;             // The payload for group msg.
+  };
 }

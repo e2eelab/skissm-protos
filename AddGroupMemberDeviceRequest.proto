@@ -13,5 +13,5 @@ import "skissm/AddGroupMemberDeviceMsg.proto";
  * Request for adding a device of group member.
  */
 message AddGroupMemberDeviceRequest {
-    AddGroupMemberDeviceMsg msg = 1;        // The included msg for this request.
+  AddGroupMemberDeviceMsg msg = 1;        // The included msg for this request.
 }

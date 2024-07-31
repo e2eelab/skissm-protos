@@ -13,6 +13,6 @@ import "skissm/E2eeAddress.proto";
  * Request for getting a group.
  */
 message GetGroupRequest {
-    E2eeAddress group_address = 1;      // The group address.
-    E2eeAddress sender_address = 2;     // The sender address.
+  E2eeAddress group_address = 1;      // The group address.
+  E2eeAddress sender_address = 2;     // The sender address.
 }

@@ -11,5 +11,5 @@ option swift_prefix="Swift";
  * Symmetric key algorithm type.
  */
 enum SymKeyAlgType {
-    SYM_KEY_ALG_TYPE_AES256GCM = 0;
+  SYM_KEY_ALG_TYPE_AES256GCM = 0;
 }

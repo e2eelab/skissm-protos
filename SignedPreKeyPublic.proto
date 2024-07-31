@@ -11,7 +11,7 @@ option swift_prefix="Swift";
  * The public part of a signed pre-key.
  */
 message SignedPreKeyPublic {
-    uint32 spk_id = 1;          // The signed pre-key ID.
-    bytes public_key = 2;       // The public part of the signed pre-key pair.
-    bytes signature = 3;        // The signature of public_key signed by the user's identity key.
+  uint32 spk_id = 1;          // The signed pre-key ID.
+  bytes public_key = 2;       // The public part of the signed pre-key pair.
+  bytes signature = 3;        // The signature of public_key signed by the user's identity key.
 }

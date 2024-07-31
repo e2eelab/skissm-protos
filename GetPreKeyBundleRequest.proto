@@ -11,7 +11,7 @@ option swift_prefix="Swift";
  * Request for getting pre-key bundle.
  */
 message GetPreKeyBundleRequest {
-    string domain = 1;          // The domain.
-    string user_id = 2;         // The user's ID.
-    string device_id = 3;       // The user's device ID.
+  string domain = 1;          // The domain.
+  string user_id = 2;         // The user's ID.
+  string device_id = 3;       // The user's device ID.
 }

@@ -14,97 +14,97 @@ import "skissm/GroupMember.proto";
  * The group operations.
  */
 enum GroupOp {
-    GROUP_OP_UNKNOWN = 0;
-    GROUP_OP_CREATE_GROUP = 11;
-    GROUP_OP_UPDATE_GROUP_NAME = 12;
-    GROUP_OP_UPDATE_GROUP_AVATAR = 13;
-    GROUP_OP_UPDATE_GROUP_ADMINS = 14;
-    GROUP_OP_ADD_GROUP_MEMBERS = 21;
-    GROUP_OP_JOIN_GROUP = 22;
-    GROUP_OP_REMOVE_GROUP_MEMBERS = 23;
-    GROUP_OP_DESTROY_GROUP = 30;
+  GROUP_OP_UNSPECIFIED = 0;
+  GROUP_OP_CREATE_GROUP = 11;
+  GROUP_OP_UPDATE_GROUP_NAME = 12;
+  GROUP_OP_UPDATE_GROUP_AVATAR = 13;
+  GROUP_OP_UPDATE_GROUP_ADMINS = 14;
+  GROUP_OP_ADD_GROUP_MEMBERS = 21;
+  GROUP_OP_JOIN_GROUP = 22;
+  GROUP_OP_REMOVE_GROUP_MEMBERS = 23;
+  GROUP_OP_DESTROY_GROUP = 30;
 }
 
 /**
  * Argument for creating a group.
  */
 message CreateGroupArg {
-    E2eeAddress creator_address = 1;
-    repeated GroupMember group_member_list = 2;
+  E2eeAddress creator_address = 1;
+  repeated GroupMember group_member_list = 2;
 }
 
 /**
  * Argument for updating the group name.
  */
 message UpdateGroupNameArg {
-    E2eeAddress user_address = 1;
-    string group_name = 2;
+  E2eeAddress user_address = 1;
+  string group_name = 2;
 }
 
 /**
  * Argument for updating the group avatar.
  */
 message UpdateGroupAvatarArg {
-    E2eeAddress user_address = 1;
-    string groupAvatarUrl = 2;
+  E2eeAddress user_address = 1;
+  string groupAvatarUrl = 2;
 }
 
 /**
  * Argument for updating the group admins.
  */
 message UpdateGroupAdminsArg {
-    E2eeAddress user_address = 1;
-    repeated GroupMember group_admin_list = 2;
+  E2eeAddress user_address = 1;
+  repeated GroupMember group_admin_list = 2;
 }
 
 /**
  * Argument for adding group members.
  */
 message AddGroupMembersArg {
-    E2eeAddress user_address = 1;
-    repeated GroupMember added_member_list = 2;
+  E2eeAddress user_address = 1;
+  repeated GroupMember added_member_list = 2;
 }
 
 /**
  * Argument for joining a group.
  */
 message JoinGroupArg {
-    E2eeAddress user_address = 1;
-    GroupMember joined_member = 2;
+  E2eeAddress user_address = 1;
+  GroupMember joined_member = 2;
 }
 
 /**
  * Argument for removing group members.
  */
 message RemoveGroupMembersArg {
-    E2eeAddress user_address = 1;
-    repeated GroupMember removed_member_list = 2;
+  E2eeAddress user_address = 1;
+  repeated GroupMember removed_member_list = 2;
 }
 
 /**
  * Argument for destroying a group.
  */
 message DestroyGroupArg {
-    E2eeAddress user_address = 1;
+  E2eeAddress user_address = 1;
 }
 
 /**
  * Msg for group manager.
  */
 message GroupManagerMsg {
-    int64 modified_date = 1;            // The modified date of the group manager msg.
-    string msgId = 2;                   // The msg ID.
-    E2eeAddress group_address = 3;      // The group address.
-    string group_name = 4;              // The group name.
-    GroupOp op = 5;                     // The operation of this msg.
-    oneof arg {
-        CreateGroupArg create_group_arg = 11;                   // The argument for creating group.
-        UpdateGroupNameArg update_group_name_arg = 12;          // The argument for updating group name.
-        UpdateGroupAvatarArg update_group_avatar_arg = 13;      // The argument for updating group avatar.
-        UpdateGroupAdminsArg update_group_admins_arg = 14;      // The argument for updating group admins.
-        AddGroupMembersArg add_group_members_arg = 21;          // The argument for adding group members.
-        JoinGroupArg join_group_arg = 22;                       // The argument for joining group.
-        RemoveGroupMembersArg remove_group_members_arg = 23;    // The argument for removing group members.
-        DestroyGroupArg destroy_group_arg = 30;                 // The argument for destroying group.
-    }
+  int64 modified_date = 1;            // The modified date of the group manager msg.
+  string msgId = 2;                   // The msg ID.
+  E2eeAddress group_address = 3;      // The group address.
+  string group_name = 4;              // The group name.
+  GroupOp op = 5;                     // The operation of this msg.
+  oneof arg {
+      CreateGroupArg create_group_arg = 11;                   // The argument for creating group.
+      UpdateGroupNameArg update_group_name_arg = 12;          // The argument for updating group name.
+      UpdateGroupAvatarArg update_group_avatar_arg = 13;      // The argument for updating group avatar.
+      UpdateGroupAdminsArg update_group_admins_arg = 14;      // The argument for updating group admins.
+      AddGroupMembersArg add_group_members_arg = 21;          // The argument for adding group members.
+      JoinGroupArg join_group_arg = 22;                       // The argument for joining group.
+      RemoveGroupMembersArg remove_group_members_arg = 23;    // The argument for removing group members.
+      DestroyGroupArg destroy_group_arg = 30;                 // The argument for destroying group.
+  }
 }

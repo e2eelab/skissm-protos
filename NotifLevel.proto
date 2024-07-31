@@ -11,8 +11,8 @@ option swift_prefix = "Swift";
  *  The notification level used to identify the urgency of a msg.
  */
 enum NotifLevel {
-    NOTIF_LEVEL_NORMAL = 0;         // The notification level indicates that server will not send push notification to device.
-    NOTIF_LEVEL_SESSION = 1;        // The notification level indicates that server will forward msg for establishing session.
-    NOTIF_LEVEL_PUSH = 11;          // The notification level indicates that server will send push notification to device.
-    NOTIF_LEVEL_STREAM = 12;        // The notification level indicates that server will send push notification with streaming flags to device.
+  NOTIF_LEVEL_NORMAL = 0;         // The notification level indicates that server will not send push notification to device.
+  NOTIF_LEVEL_SESSION = 1;        // The notification level indicates that server will forward msg for establishing session.
+  NOTIF_LEVEL_PUSH = 11;          // The notification level indicates that server will send push notification to device.
+  NOTIF_LEVEL_STREAM = 12;        // The notification level indicates that server will send push notification with streaming flags to device.
 }

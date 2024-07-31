@@ -11,18 +11,18 @@ option swift_prefix="Swift";
  * The system operations.
  */
 enum SystemOp {
-    SYSTEM_OP_WELCOME_MSG = 0;
-    SYSTEM_OP_REGISTER_MSG = 1;
-    SYSTEM_OP_REGISTER_SUCCESS_MSG = 2;
-    SYSTEM_OP_ANNOUNCEMENT_MSG = 3;
-    SYSTEM_OP_NOTIFICATION_MSG = 4;
+  SYSTEM_OP_WELCOME_MSG = 0;
+  SYSTEM_OP_REGISTER_MSG = 1;
+  SYSTEM_OP_REGISTER_SUCCESS_MSG = 2;
+  SYSTEM_OP_ANNOUNCEMENT_MSG = 3;
+  SYSTEM_OP_NOTIFICATION_MSG = 4;
 }
 
 /**
  * Msg for system manager.
  */
 message SystemManagerMsg {
-    int64 modified_date = 1;        // The modified date of the system manager msg.
-    SystemOp op = 2;                // The operation of the system manager msg.
-    bytes payload = 3;              // The optional payload data.
+  int64 modified_date = 1;        // The modified date of the system manager msg.
+  SystemOp op = 2;                // The operation of the system manager msg.
+  bytes payload = 3;              // The optional payload data.
 }

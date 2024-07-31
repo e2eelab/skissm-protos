@@ -16,9 +16,9 @@ import "skissm/GroupMember.proto";
  * Msg for removing group members.
  */
 message RemoveGroupMembersMsg {
-    uint32 e2ee_pack_id = 1;                            // The e2ee pack ID.
-    E2eeAddress sender_address = 2;                     // The sender's address.
-    GroupInfo group_info = 3;                           // The group information.
-    repeated GroupMember removing_member_list = 4;      // The members going to be removed.
-    repeated GroupMemberInfo member_info_list = 5;      // The remaining group members' information.
+  uint32 e2ee_pack_id = 1;                            // The e2ee pack ID.
+  E2eeAddress sender_address = 2;                     // The sender's address.
+  GroupInfo group_info = 3;                           // The group information.
+  repeated GroupMember removing_member_list = 4;      // The members going to be removed.
+  repeated GroupMemberInfo member_info_list = 5;      // The remaining group members' information.
 }

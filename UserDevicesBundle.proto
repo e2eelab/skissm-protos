@@ -11,7 +11,7 @@ option swift_prefix="Swift";
  * Bundle for user devices.
  */
 message UserDevicesBundle {
-    string domain = 1;                      // The domain.
-    string user_id = 2;                     // The user's ID.
-    repeated string device_id_list = 3;     // All of the user's devices ID.
+  string domain = 1;                      // The domain.
+  string user_id = 2;                     // The user's ID.
+  repeated string device_id_list = 3;     // All of the user's devices ID.
 }

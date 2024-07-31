@@ -12,6 +12,6 @@ option swift_prefix="Swift";
  * Msg for server heartbeat.
  */
 message ServerHeartbeatMsg {
-    string hostname = 1;    // The optional server host name.
-    int64 server_t = 2;     // The server time stamp.
+  string hostname = 1;    // The optional server host name.
+  int64 server_t = 2;     // The server time stamp.
 }

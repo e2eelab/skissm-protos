@@ -11,26 +11,26 @@ option swift_prefix="Swift";
  * The pending request types.
  */
 enum PendingRequestType {
-    PENDING_REQUEST_TYPE_GET_PRE_KEY_BUNDLE = 0;
-    PENDING_REQUEST_TYPE_INVITE = 1;
-    PENDING_REQUEST_TYPE_ACCEPT = 2;
-    PENDING_REQUEST_TYPE_PUBLISH_SPK = 3;
-    PENDING_REQUEST_TYPE_SUPPLY_OPKS = 4;
-    PENDING_REQUEST_TYPE_SEND_ONE2ONE_MSG = 5;
-    PENDING_REQUEST_TYPE_CREATE_GROUP = 6;
-    PENDING_REQUEST_TYPE_ADD_GROUP_MEMBERS= 7;
-    PENDING_REQUEST_TYPE_ADD_GROUP_MEMBER_DEVICE= 8;
-    PENDING_REQUEST_TYPE_REMOVE_GROUP_MEMBERS= 9;
-    PENDING_REQUEST_TYPE_LEAVE_GROUP= 10;
-    PENDING_REQUEST_TYPE_SEND_GROUP_MSG= 11;
-    PENDING_REQUEST_TYPE_PROTO_MSG = 12;
+  PENDING_REQUEST_TYPE_GET_PRE_KEY_BUNDLE = 0;
+  PENDING_REQUEST_TYPE_INVITE = 1;
+  PENDING_REQUEST_TYPE_ACCEPT = 2;
+  PENDING_REQUEST_TYPE_PUBLISH_SPK = 3;
+  PENDING_REQUEST_TYPE_SUPPLY_OPKS = 4;
+  PENDING_REQUEST_TYPE_SEND_ONE2ONE_MSG = 5;
+  PENDING_REQUEST_TYPE_CREATE_GROUP = 6;
+  PENDING_REQUEST_TYPE_ADD_GROUP_MEMBERS= 7;
+  PENDING_REQUEST_TYPE_ADD_GROUP_MEMBER_DEVICE= 8;
+  PENDING_REQUEST_TYPE_REMOVE_GROUP_MEMBERS= 9;
+  PENDING_REQUEST_TYPE_LEAVE_GROUP= 10;
+  PENDING_REQUEST_TYPE_SEND_GROUP_MSG= 11;
+  PENDING_REQUEST_TYPE_PROTO_MSG = 12;
 }
 
 /**
  * The pending request.
  */
 message PendingRequest {
-    PendingRequestType type = 1;                // The type of the pending request
-    bytes request_data = 2;                     // The data for the pending request.
-    repeated bytes request_arg_list = 3;        // The optional arguments for the pending request .
+  PendingRequestType type = 1;                // The type of the pending request
+  bytes request_data = 2;                     // The data for the pending request.
+  repeated bytes request_arg_list = 3;        // The optional arguments for the pending request .
 }

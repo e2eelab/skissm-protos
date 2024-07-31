@@ -13,5 +13,5 @@ import "skissm/ProtoMsgTag.proto";
  * Msg for acquiring un-processed msgs form server.
  */
 message AcquireSyncMsg {
-    ProtoMsgTag last_proto_msg_tag = 1;      // The last handled tag for acquiring un-handled msg from server.
+  ProtoMsgTag last_proto_msg_tag = 1;      // The last handled tag for acquiring un-handled msg from server.
 }

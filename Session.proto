@@ -15,24 +15,24 @@ import "skissm/Ratchet.proto";
  * The Session.
  */
 message Session {
-    string version = 1;                             // The version.
-    uint32 e2ee_pack_id = 2;                        // The e2ee pack ID.
-    string session_id = 3;                          // The session ID.
-    E2eeAddress our_address = 4;                    // Our address.
-    E2eeAddress their_address = 5;                  // Their address.
+  string version = 1;                             // The version.
+  uint32 e2ee_pack_id = 2;                        // The e2ee pack ID.
+  string session_id = 3;                          // The session ID.
+  E2eeAddress our_address = 4;                    // Our address.
+  E2eeAddress their_address = 5;                  // Their address.
 
-    Ratchet ratchet = 11;                           // The ratchet data.
-    bytes associated_data = 12;                     // The associated data.
-    bytes temp_shared_secret = 13;                  // The shared secret encapsulated by the invitee's pre-key bundle, empty in ECC.
-    bytes fingerprint = 14;                         // The fingerprint.
+  Ratchet ratchet = 11;                           // The ratchet data.
+  bytes associated_data = 12;                     // The associated data.
+  bytes temp_shared_secret = 13;                  // The shared secret encapsulated by the invitee's pre-key bundle, empty in ECC.
+  bytes fingerprint = 14;                         // The fingerprint.
 
-    KeyPair alice_base_key = 21;                    // The inviter's base key pair.
-    uint32 bob_signed_pre_key_id = 22;              // The invitee's signed pre-key ID.
-    uint32 bob_one_time_pre_key_id = 23;            // The invitee's one-time pre-key ID.
-    repeated bytes pre_shared_input_list = 24;      // The data that needs to generate some shared secret.
+  KeyPair alice_base_key = 21;                    // The inviter's base key pair.
+  uint32 bob_signed_pre_key_id = 22;              // The invitee's signed pre-key ID.
+  uint32 bob_one_time_pre_key_id = 23;            // The invitee's one-time pre-key ID.
+  repeated bytes pre_shared_input_list = 24;      // The data that needs to generate some shared secret.
 
-    bool f2f = 31;                                  // The session is face-to-face verified or not.
-    bool responded = 32;                            // The invitee has responded or not.
-    int64 invite_t = 33;                            // The server time of invitation for creating this session.
-    bool short_term = 34;                           // The flag indicates that session is used for short term.
+  bool f2f = 31;                                  // The session is face-to-face verified or not.
+  bool responded = 32;                            // The invitee has responded or not.
+  int64 invite_t = 33;                            // The server time of invitation for creating this session.
+  bool short_term = 34;                           // The flag indicates that session is used for short term.
 }

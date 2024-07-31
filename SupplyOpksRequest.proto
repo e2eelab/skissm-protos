@@ -14,7 +14,7 @@ import "skissm/OneTimePreKeyPublic.proto";
  * Request for sypplying one-time pre-keys.
  */
 message SupplyOpksRequest {
-    uint32 e2ee_pack_id = 1;                                        // The e2ee pack ID.
-    E2eeAddress user_address = 2;                                   // The user's address.
-    repeated OneTimePreKeyPublic one_time_pre_key_public_list = 3;  // The public part of one-time pre-key pairs.
+  uint32 e2ee_pack_id = 1;                                        // The e2ee pack ID.
+  E2eeAddress user_address = 2;                                   // The user's address.
+  repeated OneTimePreKeyPublic one_time_pre_key_public_list = 3;  // The public part of one-time pre-key pairs.
 }

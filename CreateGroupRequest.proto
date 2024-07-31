@@ -13,5 +13,5 @@ import "skissm/CreateGroupMsg.proto";
  * Request for creating a group.
  */
 message CreateGroupRequest {
-    CreateGroupMsg msg = 1;             // The included msg for this request.
+  CreateGroupMsg msg = 1;             // The included msg for this request.
 }

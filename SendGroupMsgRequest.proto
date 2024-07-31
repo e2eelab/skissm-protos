@@ -14,7 +14,7 @@ import "skissm/E2eeMsg.proto";
  * Request for sending a group msg.
  */
 message SendGroupMsgRequest {
-    E2eeMsg msg = 1;                            // The included msg for this request.
-    repeated E2eeAddress allow_list = 2;        // Optional allow list.
-    repeated E2eeAddress deny_list = 3;         // Optional deny list.
+  E2eeMsg msg = 1;                            // The included msg for this request.
+  repeated E2eeAddress allow_list = 2;        // Optional allow list.
+  repeated E2eeAddress deny_list = 3;         // Optional deny list.
 }

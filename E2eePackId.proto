@@ -16,9 +16,9 @@ import "skissm/SymKeyAlgType.proto";
  * Msg for e2ee pack ID.
  */
 message E2eePackId {
-    int32 ver = 1;                              // The version.
-    DsAlgType ds = 2;                           // The digital signature algorithm type.
-    KemAlgType kem = 3;                         // The kem algorithm type.
-    SymKeyAlgType sym_key = 4;                  // The symmetric-key algorithm type.
-    HashAlgType hash = 5;                       // The hash algorithm type.
+  int32 ver = 1;                              // The version.
+  DsAlgType ds = 2;                           // The digital signature algorithm type.
+  KemAlgType kem = 3;                         // The kem algorithm type.
+  SymKeyAlgType sym_key = 4;                  // The symmetric-key algorithm type.
+  HashAlgType hash = 5;                       // The hash algorithm type.
 }

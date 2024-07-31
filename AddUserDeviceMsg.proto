@@ -13,6 +13,6 @@ import "skissm/E2eeAddress.proto";
  * Msg for adding user device.
  */
 message AddUserDeviceMsg {
-    E2eeAddress user_address = 1;                   // The added user e2ee address
-    repeated E2eeAddress old_address_list = 2;      // The list of other e2ee address that has the same user ID
+  E2eeAddress user_address = 1;                   // The added user e2ee address
+  repeated E2eeAddress old_address_list = 2;      // The list of other e2ee address that has the same user ID
 }
