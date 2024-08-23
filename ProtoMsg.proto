@@ -28,6 +28,7 @@ import "skissm/SupplyOpksMsg.proto";
 import "skissm/ServerHeartbeatMsg.proto";
 import "skissm/ServerSignedSignature.proto";
 import "skissm/SystemManagerMsg.proto";
+import "skissm/UpgradeE2eePackMsg.proto";
 
 /**
  * The proto msg from server.
@@ -61,6 +62,8 @@ message ProtoMsg {
 
       ClientHeartbeatMsg client_heartbeat_msg = 101;              // The client heart beat msg.
       ServerHeartbeatMsg server_heartbeat_msg = 102;              // The server heart beat msg.
+
+      UpgradeE2eePackMsg upgrade_e2ee_pack_msg = 901;             // The upgrade e2ee pack msg.
   };
 
   repeated ServerSignedSignature signature_list = 1001;           // The list of signatures created by signing the fingerprint of tag||from||to||payload with each server's key.

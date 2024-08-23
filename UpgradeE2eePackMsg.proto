@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package skissm;
+ 
+option java_package = "org.e2eelab.proto.skissm";
+option java_outer_classname = "UpgradeE2eePackMsgProto";
+option objc_class_prefix = "Objc";
+option swift_prefix="Swift";
+ 
+/**
+ * Message for upgrading e2ee pack.
+ */
+message UpgradeE2eePackMsg {
+  int64 upgrade_ts = 1;                   // The server timestamp for upgrading e2ee pack.
+  uint32 e2ee_pack_id = 2;                // The new e2ee pack ID.
+}
