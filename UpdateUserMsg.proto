@@ -17,6 +17,7 @@ enum UpdateUserOp {
   UPDATE_USER_OP_AVATAR = 1;
   UPDATE_USER_OP_STATE = 2;
   UPDATE_USER_OP_PRIVACY = 3;
+  UPDATE_USER_OP_BACKUP_PASSKEY = 4;
 }
 
 /**
@@ -48,6 +49,13 @@ message UpdateUserPrivacyArg {
 }
 
 /**
+ * Argument for updating the user backup passkey.
+ */
+message UpdateUserBackupPasskeyArg {
+  bytes backup_passkey = 1;
+}
+
+/**
  * Msg for updating user.
  */
 message UpdateUserMsg {
@@ -59,5 +67,6 @@ message UpdateUserMsg {
       UpdateUserAvatarArg update_user_avatar_arg = 5;     // The argument for updating user avatar.
       UpdateUserStateArg update_user_state_arg = 6;       // The argument for updating user state.
       UpdateUserPrivacyArg update_user_privacy_arg = 7;   // The argument for updating user privacy.
+      UpdateUserBackupPasskeyArg update_user_backup_passkey_arg = 8;  // The argument for updating user backup passkey.
   }
 }
